@@ -1,0 +1,5 @@
+package homework.models;
+
+public class User {
+
+}
