@@ -28,13 +28,33 @@ public class UserService {
 	}
 	
 	public void update(User user) {
+		
+		if(!this.checkNameLength(user)) {
+			System.out.println("\"" + user.name + "\" is " + user.name.length() + " characters but \"name\" cannot exceed 25 characters.");
+			return;
+		}
+		
+		int userIndex = this._users.indexOf(user);
+		
+		this._users.set(userIndex, user);
 		System.out.println(user.name + " " + Messages.Updated);
 	}
+	
 	public void delete(User user) {
+		
+		int userIndex = this._users.indexOf(user);
+		
+		this._users.remove(userIndex);
 		System.out.println(user.name + " " + Messages.Deleted);
 	}
+	
 	public List<User> getAll() {
 		return _users;
+	}
+	
+	public User getById(int id) {
+		
+		return _users.stream().filter(u -> u.id == id).findFirst().get();
 	}
 	
 	private boolean checkNameLength(User user) {

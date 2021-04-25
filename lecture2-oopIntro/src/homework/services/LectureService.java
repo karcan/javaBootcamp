@@ -11,10 +11,10 @@ public class LectureService {
 	
 	private List<Lecture> _lectures = new ArrayList<Lecture>();
 	
-	public void add(Lecture course) {
+	public void add(Lecture lecture) {
 		
-		this._lectures.add(course);
-		System.out.println(course.name + " " + Messages.Added);
+		this._lectures.add(lecture);
+		System.out.println(lecture.name + " " + Messages.Added);
 	}
 	
 	public void add(Lecture[] lectures) {
@@ -23,12 +23,20 @@ public class LectureService {
 		}
 	}
 	
-	public void update(Lecture course) {
-		System.out.println(course.name + " " + Messages.Updated);
+	public void update(Lecture lecture) {
+		
+		int lectureIndex = this._lectures.indexOf(lecture);
+		
+		this._lectures.set(lectureIndex, lecture);
+		System.out.println(lecture.name + " " + Messages.Updated);
 	}
 	
-	public void delete(Lecture course) {
-		System.out.println(course.name + " " + Messages.Deleted);
+	public void delete(Lecture lecture) {
+		
+		int lectureIndex = this._lectures.indexOf(lecture);
+		
+		this._lectures.remove(lectureIndex);
+		System.out.println(lecture.name + " " + Messages.Deleted);
 	}
 	
 	public List<Lecture>  getAll() {

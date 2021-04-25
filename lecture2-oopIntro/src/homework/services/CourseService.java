@@ -20,9 +20,17 @@ public class CourseService {
 		System.out.println(course.name + " "  + Messages.Added);
 	}
 	public void update(Course course) {
+		
+		int courseIndex = this._courses.indexOf(course);
+		
+		this._courses.set(courseIndex, course);
 		System.out.println(course.name + " " + Messages.Updated);
 	}
 	public void delete(Course course) {
+		
+		int courseIndex = this._courses.indexOf(course);
+		
+		this._courses.remove(courseIndex);
 		System.out.println(course.name + " " + Messages.Deleted);
 	}
 	public List<Course> getAll() {

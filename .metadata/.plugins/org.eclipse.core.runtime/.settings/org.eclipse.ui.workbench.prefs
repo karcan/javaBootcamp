@@ -1,3 +1,5 @@
+//org.eclipse.ui.commands/state/org.eclipse.ui.navigator.resources.nested.changeProjectPresentation/org.eclipse.ui.commands.radioState=false
+//org.eclipse.ui.commands/state/org.eclipse.wst.xml.views.XPathView.processor.xpathprocessor/org.eclipse.ui.commands.radioState=xpath10
 ACTIVE_HYPERLINK_COLOR=255,200,0
 ATMARK_RULE=89,179,179
 ATTRIBUTE_DELIM=89,179,179
