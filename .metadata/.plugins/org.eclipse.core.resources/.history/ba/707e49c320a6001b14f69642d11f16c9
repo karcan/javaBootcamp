@@ -1,0 +1,42 @@
+package homework.services;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.stream.Collectors;
+
+import homework.constants.Messages;
+import homework.models.Instructor;
+
+public class InstructorService {
+	
+	UserService _userService;
+	List<Instructor> _instructors;
+	
+	public InstructorService() {
+		this._userService = new UserService();
+		this._instructors = new ArrayList<Instructor>();
+	}
+	
+	public void add(Instructor instructor) {
+		
+		this._userService.add(instructor);
+		System.out.println(instructor.name + " " + Messages.Added);
+	}
+	public void update(Instructor instructor) {
+		
+		this._userService.update(instructor);
+		System.out.println(instructor.name + " " + Messages.Updated);
+	}
+	public void delete(Instructor instructor) {
+		
+		this._userService.delete(instructor);
+		System.out.println(instructor.name + " " + Messages.Updated);
+	}
+	public List<Instructor> getAll() {
+		return this._userService.getAll().stream().map(u -> (Instructor)u).collect(Collectors.toList());
+	}
+	public Instructor getById(int id) {
+		return this._userService.getAll().stream().filter(u -> u.id == id).findFirst().get().map(u -> (Instructor)u).collect(Collectors.toList());
+	}
+}

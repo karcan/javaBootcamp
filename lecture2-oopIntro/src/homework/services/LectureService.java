@@ -9,7 +9,11 @@ import homework.models.Lecture;
 
 public class LectureService {
 	
-	private List<Lecture> _lectures = new ArrayList<Lecture>();
+	private List<Lecture> _lectures;
+	
+	public LectureService() {
+		this._lectures =  new ArrayList<Lecture>();
+	}
 	
 	public void add(Lecture lecture) {
 		

@@ -8,7 +8,11 @@ import homework.models.User;
 
 public class UserService {
 	
-	private List<User> _users = new ArrayList<User>();
+	private List<User> _users;
+	
+	public UserService() {
+		this._users =  new ArrayList<User>();
+	}
 	
 	public void add(User user) {
 		

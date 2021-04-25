@@ -8,7 +8,11 @@ import homework.models.Course;
 
 public class CourseService {
 	
-	List<Course> _courses = new ArrayList<Course>();
+	List<Course> _courses;
+	
+	public CourseService() {
+		this._courses = new ArrayList<Course>();
+	}
 	
 	public void add(Course course) {
 		if(!this.checkStartAndEndDate(course)) {
