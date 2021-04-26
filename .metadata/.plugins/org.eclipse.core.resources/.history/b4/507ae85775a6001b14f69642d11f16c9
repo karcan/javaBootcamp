@@ -8,7 +8,7 @@ import homework.model.Instructor;
 
 public class InstructorService {
 	
-	private List<Instructor> _instructors;
+	List<Instructor> _instructors;
 	
 	public InstructorService() {
 		this._instructors = new ArrayList<Instructor>();
