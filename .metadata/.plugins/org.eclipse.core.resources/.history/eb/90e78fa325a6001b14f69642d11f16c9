@@ -35,7 +35,7 @@ public class UserService {
 	public void update(User user) {
 		
 		if(!this.checkNameLength(user)) {
-			System.out.println("\"" + user.name + "\" " + Validations.nameLengthExceeded);
+			System.out.println("\"" + user.name + "\" is " + user.name.length() + " characters but \"name\" cannot exceed 25 characters.");
 			return;
 		}
 		

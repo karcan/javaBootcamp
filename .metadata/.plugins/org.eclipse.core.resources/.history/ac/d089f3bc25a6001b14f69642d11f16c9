@@ -1,0 +1,5 @@
+package homework.constants;
+
+public class Validations {
+	public static String nameLengthExceeded = "character limit exceeded.";
+}

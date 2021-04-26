@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import homework.constants.Messages;
-import homework.constants.Validations;
 import homework.models.Course;
 
 public class CourseService {
@@ -17,7 +16,7 @@ public class CourseService {
 	
 	public void add(Course course) {
 		if(!this.checkStartAndEndDate(course)) {
-			System.out.println("Course " + Validations.startDateAndEndDateCanNotBeNull);
+			System.out.println("Course start date and end date are cannot be null.");
 			return;
 		}
 		
