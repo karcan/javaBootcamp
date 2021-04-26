@@ -1,0 +1,7 @@
+package homework.constant;
+
+public class Validations {
+	
+	public static String nameLengthExceeded = "character " + Message.limitExceeded;
+	public static String startDateAndEndDateCanNotBeNull = "startDate and endDate " + Message.canNotBeNull;
+}

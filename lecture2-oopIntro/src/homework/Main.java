@@ -2,11 +2,11 @@ package homework;
 
 import java.util.Date;
 
-import homework.models.Lecture;
-import homework.models.Student;
-import homework.models.User;
-import homework.services.LectureService;
-import homework.services.StudentService;
+import homework.model.Lecture;
+import homework.model.Student;
+import homework.model.User;
+import homework.service.LectureService;
+import homework.service.StudentService;
 
 public class Main {
 
@@ -28,6 +28,8 @@ public class Main {
 		Student user3 = new Student(3,"Uğur","Yıldız","","ugur","deneme12345");
 		Student user4 = new Student(4,"Pinar","Darıcı","","pinar","deneme12345");
 		
+		
+
 		// single adding method. 
 		studentService.add(user1);
 		
@@ -50,14 +52,14 @@ public class Main {
 		
 		// get all user list. 
 		System.out.println("");
-		System.out.println("id	name	surname");
-		System.out.println("--	----	-------");
+		System.out.println("|id|name|surname|");
+		System.out.println("|---|---|---|");
 		for (User user : studentService.getAll()) {
-			System.out.println(user.id + "	" + user.name + "	" + user.surname);
+			System.out.println("|" + user.id + "|" + user.name + "|" + user.surname + "|");
 		} 
 		
 		// get user by id;
-		System.out.println(studentService.getById(2).name);
+		System.out.println("Get user by id : " + studentService.getById(2).name);
 	}
 	
 	private static void lectureTest() {
@@ -78,26 +80,26 @@ public class Main {
 		
 		// get all lecture list.
 		System.out.println("");
-		System.out.println("id	courseId	name	date");
-		System.out.println("--	--------	----	----");
+		System.out.println("|id|courseId|name|date|");
+		System.out.println("|---|---|---|---|");
 		for (Lecture lecture : lectureService.getAll()) {
-			System.out.println(lecture.id + "	" + lecture.courseId + "		" + lecture.name + "	" + lecture.date);
+			System.out.println("|"+ lecture.id + "|" + lecture.courseId + "|" + lecture.name + "|" + lecture.date + "|");
 		}
 		
 		// get lectures by id.
 		System.out.println("");
-		System.out.println("id	courseId	name	date");
-		System.out.println("--	--------	----	----");
+		System.out.println("|id|courseId|name|date|");
+		System.out.println("|---|---|---|---|");
 		for (Lecture lecture : lectureService.getAllById(2)) {
-			System.out.println(lecture.id + "	" + lecture.courseId + "		" + lecture.name + "	" + lecture.date);
+			System.out.println("|"+ lecture.id + "|" + lecture.courseId + "|" + lecture.name + "|" + lecture.date + "|");
 		}
 		
 		// get lectures by courseId.
 		System.out.println("");
-		System.out.println("id	courseId	name	date");
-		System.out.println("--	--------	----	----");
+		System.out.println("|id|courseId|name|date|");
+		System.out.println("|---|---|---|---|");
 		for (Lecture lecture : lectureService.getAllByCourseId(1)) {
-			System.out.println(lecture.id + "	" + lecture.courseId + "		" + lecture.name + "	" + lecture.date);
+			System.out.println("|"+ lecture.id + "|" + lecture.courseId + "|" + lecture.name + "|" + lecture.date + "|");
 		}
 	}
 }
