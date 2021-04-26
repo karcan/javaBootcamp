@@ -5,7 +5,7 @@ StudentService studentService = new StudentService();
 ### All students list : 
 ```Java
 for (Student student : studentService.getAll()) {
-  System.out.println(student.id + ", " + student.name + ", " + student.surname);
+  System.out.println(student.getId() + ", " + student.getName() + ", " + student.getSurname());
 } 
 ```
 ### Result : 
@@ -20,7 +20,7 @@ for (Student student : studentService.getAll()) {
 ### Get student by id : 
 ```Java
 Student student = studentService.getById(2);
-System.out.println(student.id + ", " + student.name + ", " + student.surname);
+System.out.println(student.getId() + ", " + student.getName() + ", " + student.getSurname());
 ```
 ### Result : 
 |id|name|surname|
@@ -36,7 +36,7 @@ LectureService lectureService = new LectureService();
 ### All lectures list : 
 ```Java
 for (Lecture lecture : lectureService.getAll()) {
-  System.out.println("|"+ lecture.id + "|" + lecture.courseId + "|" + lecture.name + "|" + lecture.date + "|");
+  System.out.println("|"+ lecture.getId() + "|" + lecture.getCourseId() + "|" + lecture.getName() + "|" + lecture.getDate() + "|");
 }
 ```
 ### Result : 
@@ -53,7 +53,7 @@ for (Lecture lecture : lectureService.getAll()) {
 ### Get lecture by id : 
 ```Java
 Lecture lecture = lectureService.getById(2);
-System.out.println(lecture.id + ", " + lecture.courseId + ", " + lecture.name + ", " + lecture.date);
+System.out.println(lecture.getId() + ", " + lecture.getCourseId() + ", " + lecture.getName() + ", " + lecture.getDate());
 ```
 ### Result : 
 |id|courseId|name|date|
@@ -65,7 +65,7 @@ System.out.println(lecture.id + ", " + lecture.courseId + ", " + lecture.name + 
 ### Get lectures by courseId : 
 ```Java
 for (Lecture lecture : lectureService.getAllByCourseId(1)) {
-  System.out.println(lecture.id + ", " + lecture.courseId + ", " + lecture.name + ", " + lecture.date);
+  System.out.println(lecture.getId() + ", " + lecture.getCourseId() + ", " + lecture.getName() + ", " + lecture.getDate());
 }
 ```
 ### Result :
