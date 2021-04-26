@@ -37,20 +37,20 @@ public class Main {
 		Student[] students = {student2,student3,student4};
 		studentService.add(students);
 		
-		// business rule testing for student name length.
+		// business rule testing for user name length.
 		System.out.println("");
 		Student student5 = new Student(5,"Haşim Ahmet Abdulbaki Buğra Bahadır","Nebioğulları","","hasim","deneme12345");
 		studentService.add(student5);
 		
-		// update student before get all list 
+		// update user before get all list 
 		student4.name = "Pınar";
 		studentService.update(student4);
 		
-		// delete student before get all list
+		// delete user before get all list
 		studentService.delete(student3);
 
 		
-		// get all students list. 
+		// get all user list. 
 		System.out.println("");
 		System.out.println("|id|name|surname|");
 		System.out.println("|---|---|---|");
@@ -58,8 +58,8 @@ public class Main {
 			System.out.println("|" + student.id + "|" + student.name + "|" + student.surname + "|");
 		} 
 		
-		// get student by id;
-		System.out.println("Get student by id : " + studentService.getById(2).name);
+		// get user by id;
+		System.out.println("Get user by id : " + studentService.getById(2).name);
 	}
 	
 	private static void lectureTest() {
@@ -87,12 +87,12 @@ public class Main {
 		}
 		
 		// get lectures by id.
-		Lecture lectureById = lectureService.getById(2);
 		System.out.println("");
 		System.out.println("|id|courseId|name|date|");
 		System.out.println("|---|---|---|---|");
-		System.out.println("|"+ lectureById.id + "|" + lectureById.courseId + "|" + lectureById.name + "|" + lectureById.date + "|");
-
+		for (Lecture lecture : lectureService.getAllById(2)) {
+			System.out.println("|"+ lecture.id + "|" + lecture.courseId + "|" + lecture.name + "|" + lecture.date + "|");
+		}
 		
 		// get lectures by courseId.
 		System.out.println("");

@@ -87,11 +87,11 @@ public class Main {
 		}
 		
 		// get lectures by id.
-		Lecture lectureById = lectureService.getById(2);
+		Lecture lecture = lectureService.getById(2);
 		System.out.println("");
 		System.out.println("|id|courseId|name|date|");
 		System.out.println("|---|---|---|---|");
-		System.out.println("|"+ lectureById.id + "|" + lectureById.courseId + "|" + lectureById.name + "|" + lectureById.date + "|");
+		System.out.println("|"+ lecture.id + "|" + lecture.courseId + "|" + lecture.name + "|" + lecture.date + "|");
 
 		
 		// get lectures by courseId.

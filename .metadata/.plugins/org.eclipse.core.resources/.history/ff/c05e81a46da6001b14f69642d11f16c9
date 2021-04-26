@@ -55,5 +55,8 @@ public class LectureService {
 		return _lectures.stream().filter(l -> l.courseId == courseId).collect(Collectors.toList());
 	}
 	
+	public List<Lecture>  getAllById(int id) {
+		return _lectures.stream().filter(l -> l.id == id).collect(Collectors.toList());
+	}
 
 }
