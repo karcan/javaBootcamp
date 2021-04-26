@@ -21,7 +21,7 @@ public class UserNotificationOption {
 	}
 
 	public void setId(int id) {
-		this.id = id;
+		this.id = id; 
 	}
 
 	public boolean isMyCommentsReplied() {
