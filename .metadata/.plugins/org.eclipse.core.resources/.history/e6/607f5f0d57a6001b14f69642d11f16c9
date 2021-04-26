@@ -12,14 +12,14 @@ public class Main {
 
 	public static void main(String[] args) {
 		
-		studentTest();
+		userTest();
 		System.out.println("");
 		lectureTest();
 
 		
 	}
 	
-	private static void studentTest() {
+	private static void userTest() {
 
 		StudentService studentService = new StudentService();
 		
