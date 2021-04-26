@@ -10,19 +10,16 @@ import homework.service.StudentService;
 public class Main {
 
 	public static void main(String[] args) {
-		
 		studentTest();
 		System.out.println("");
 		lectureTest();
-
-		
 	}
 	
 	private static void studentTest() {
 
 		StudentService studentService = new StudentService();
 		
-		Student student1 = new Student(1,"Karcan","Özbal","karcanozbal@outlook.com.tr","karcan","deneme12345");
+		Student student1 = new Student(1,"Karcan","Özbal","karcanozbal@outlook.com.tr","karcan","deneme12345" );
 		Student student2 = new Student(2,"Ömer","Acar","acar.0mer@hotmail.com","omer","deneme12345");
 		Student student3 = new Student(3,"Uğur","Yıldız","","ugur","deneme12345");
 		Student student4 = new Student(4,"Pinar","Darıcı","","pinar","deneme12345");

@@ -2,3 +2,5 @@
 .plugins\
 .metadata
 .metadata\
+.idea
+.idea\
