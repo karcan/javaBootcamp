@@ -7,16 +7,16 @@ public class Lecture {
 	public Lecture() {} 
 	
 	public Lecture(int id, int courseId, String name, Date date) {
-		this.setId(courseId);
+		this.setId(id);
 		this.setCourseId(courseId);
 		this.setName(name);
 		this.setDate(date);
 	}
 	
-	public int id;
-	public int courseId;
-	public String name;
-	public Date date;
+	private int id;
+	private int courseId;
+	private String name;
+	private Date date;
 	
 	public int getId() {
 		return id;

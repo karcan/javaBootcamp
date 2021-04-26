@@ -9,7 +9,7 @@ public class Instructor extends User {
 		this.setAbout(about);
 	}
 	
-	public String about;
+	private String about;
 
 	public String getAbout() {
 		return about;

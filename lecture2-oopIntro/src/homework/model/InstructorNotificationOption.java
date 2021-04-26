@@ -9,7 +9,7 @@ public class InstructorNotificationOption extends UserNotificationOption {
 		this.setCommentsMyLectures(commentsMyLectures);
 	}
 	
-	public boolean commentsMyLectures;
+	private boolean commentsMyLectures;
 
 	public boolean isCommentsMyLectures() {
 		return commentsMyLectures;

@@ -18,12 +18,12 @@ public class StudentService {
 	public void add(Student student) {
 		
 		if(!this.checkNameLength(student)) {
-			System.out.println("\"" + student.name + "\" " + Validation.nameLengthExceeded);
+			System.out.println("\"" + student.getName() + "\" " + Validation.nameLengthExceeded);
 			return;
 		}
 		
 		this._students.add(student);
-		System.out.println(student.name + " " + Message.Added);
+		System.out.println(student.getName() + " " + Message.Added);
 	}
 	
 	public void add(Student[] students) {
@@ -35,14 +35,14 @@ public class StudentService {
 	public void update(Student student) {
 		
 		if(!this.checkNameLength(student)) {
-			System.out.println("\"" + student.name + "\" " + Validation.nameLengthExceeded);
+			System.out.println("\"" + student.getName() + "\" " + Validation.nameLengthExceeded);
 			return;
 		}
 		
 		int userIndex = this._students.indexOf(student);
 		
 		this._students.set(userIndex, student);
-		System.out.println(student.name + " " + Message.Updated);
+		System.out.println(student.getName() + " " + Message.Updated);
 	}
 	
 	public void delete (Student student) {
@@ -50,12 +50,12 @@ public class StudentService {
 		int userIndex = this._students.indexOf(student);
 		
 		this._students.remove(userIndex);
-		System.out.println(student.name + " " + Message.Deleted);
+		System.out.println(student.getName() + " " + Message.Deleted);
 	}
 	
 	public Student getById (int id) {
 		
-		return _students.stream().filter(u -> u.id == id).findFirst().get();
+		return _students.stream().filter(u -> u.getId() == id).findFirst().get();
 	}
 
 	public List<Student> getAll(){
@@ -65,7 +65,7 @@ public class StudentService {
 	
 	private boolean checkNameLength(Student user) {
 		
-		if(user.name.length() > 25) {
+		if(user.getName().length() > 25) {
 			return false;
 		}
 		

@@ -7,18 +7,18 @@ public class LectureComment {
 	public LectureComment() {} 
 	
 	public LectureComment(int id, int lectureId, int userId, Date date, Integer parentId) {
-		this.setId(userId);
+		this.setId(id);
 		this.setLectureId(lectureId);
 		this.setUserId(userId);
 		this.setDate(date);
 		this.setParentId(parentId);
 	}
 
-	public int id;
-	public int lectureId;
-	public int userId;
-	public Date date;
-	public Integer parentId;
+	private int id;
+	private int lectureId;
+	private int userId;
+	private Date date;
+	private Integer parentId;
 	
 	public int getId() {
 		return id;

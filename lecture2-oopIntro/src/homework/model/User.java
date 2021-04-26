@@ -6,19 +6,19 @@ public class User {
 	
 	public User(int id, String name, String surname, String mail, String username, String password) {
 		this.setId(id);
-		this.setName(username);
+		this.setName(name);
 		this.setSurname(surname);
 		this.setMail(mail);
 		this.setUsername(username);
 		this.setPassword(password);
 	}
 	
-	public int id;
-	public String name;
-	public String surname;
-	public String mail;
-	public String username;
-	public String password;
+	private int id;
+	private String name;
+	private String surname;
+	private String mail;
+	private String username;
+	private String password;
 	
 	public int getId() {
 		return id;

@@ -18,12 +18,12 @@ public class UserService {
 	public void add(User user) {
 		
 		if(!this.checkNameLength(user)) {
-			System.out.println("\"" + user.name + "\" " + Validation.nameLengthExceeded);
+			System.out.println("\"" + user.getName() + "\" " + Validation.nameLengthExceeded);
 			return;
 		}
 		
 		this._users.add(user);
-		System.out.println(user.name + " " + Message.Added);
+		System.out.println(user.getName() + " " + Message.Added);
 	}
 	
 	public void add(User[] users) {
@@ -35,14 +35,14 @@ public class UserService {
 	public void update(User user) {
 		
 		if(!this.checkNameLength(user)) {
-			System.out.println("\"" + user.name + "\" " + Validation.nameLengthExceeded);
+			System.out.println("\"" + user.getName() + "\" " + Validation.nameLengthExceeded);
 			return;
 		}
 		
 		int userIndex = this._users.indexOf(user);
 		
 		this._users.set(userIndex, user);
-		System.out.println(user.name + " " + Message.Updated);
+		System.out.println(user.getName() + " " + Message.Updated);
 	}
 	
 	public void delete(User user) {
@@ -50,12 +50,12 @@ public class UserService {
 		int userIndex = this._users.indexOf(user);
 		
 		this._users.remove(userIndex);
-		System.out.println(user.name + " " + Message.Deleted);
+		System.out.println(user.getName() + " " + Message.Deleted);
 	}
 	
 	public User getById(int id) {
 		
-		return _users.stream().filter(u -> u.id == id).findFirst().get();
+		return _users.stream().filter(u -> u.getId() == id).findFirst().get();
 	}
 	
 	public List<User> getAll() {
@@ -64,7 +64,7 @@ public class UserService {
 	
 	private boolean checkNameLength(User user) {
 		
-		if(user.name.length() > 25) {
+		if(user.getName().length() > 25) {
 			return false;
 		}
 		

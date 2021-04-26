@@ -18,7 +18,7 @@ public class LectureService {
 	public void add(Lecture lecture) {
 		
 		this._lectures.add(lecture);
-		System.out.println(lecture.name + " " + Message.Added);
+		System.out.println(lecture.getName() + " " + Message.Added);
 	}
 	
 	public void add(Lecture[] lectures) {
@@ -32,7 +32,7 @@ public class LectureService {
 		int lectureIndex = this._lectures.indexOf(lecture);
 		
 		this._lectures.set(lectureIndex, lecture);
-		System.out.println(lecture.name + " " + Message.Updated);
+		System.out.println(lecture.getName() + " " + Message.Updated);
 	}
 	
 	public void delete(Lecture lecture) {
@@ -40,11 +40,11 @@ public class LectureService {
 		int lectureIndex = this._lectures.indexOf(lecture);
 		
 		this._lectures.remove(lectureIndex);
-		System.out.println(lecture.name + " " + Message.Deleted);
+		System.out.println(lecture.getName() + " " + Message.Deleted);
 	}
 	
 	public Lecture getById(int id) {
-		return _lectures.stream().filter(l -> l.id == id).findFirst().get();
+		return _lectures.stream().filter(l -> l.getId() == id).findFirst().get();
 	}
 	
 	public List<Lecture>  getAll() {
@@ -52,7 +52,7 @@ public class LectureService {
 	}
 	
 	public List<Lecture>  getAllByCourseId(int courseId) {
-		return _lectures.stream().filter(l -> l.courseId == courseId).collect(Collectors.toList());
+		return _lectures.stream().filter(l -> l.getCourseId() == courseId).collect(Collectors.toList());
 	}
 	
 

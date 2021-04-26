@@ -22,7 +22,7 @@ public class CourseService {
 		}
 		
 		this._courses.add(course);
-		System.out.println(course.name + " "  + Message.Added);
+		System.out.println(course.getName() + " "  + Message.Added);
 	}
 	
 	public void update(Course course) {
@@ -30,7 +30,7 @@ public class CourseService {
 		int courseIndex = this._courses.indexOf(course);
 		
 		this._courses.set(courseIndex, course);
-		System.out.println(course.name + " " + Message.Updated);
+		System.out.println(course.getName() + " " + Message.Updated);
 	}
 	
 	public void delete(Course course) {
@@ -38,11 +38,11 @@ public class CourseService {
 		int courseIndex = this._courses.indexOf(course);
 		
 		this._courses.remove(courseIndex);
-		System.out.println(course.name + " " + Message.Deleted);
+		System.out.println(course.getName() + " " + Message.Deleted);
 	}
 	
 	public Course getById(int id) {
-		return this._courses.stream().filter(c -> c.id == id).findFirst().get();
+		return this._courses.stream().filter(c -> c.getId() == id).findFirst().get();
 	}
 	
 	public List<Course> getAll() {
@@ -51,7 +51,7 @@ public class CourseService {
 	
 	private boolean checkStartAndEndDate(Course course) {
 		
-		if(course.startDate == null || course.endDate == null) {
+		if(course.getStartDate() == null || course.getEndDate() == null) {
 			return false;
 		}
 		

@@ -11,10 +11,10 @@ public class UserNotificationOption {
 		this.setInformationAndPromotion(informationAndPromotion);
 	}
 	
-	public int id;
-	public boolean myCommentsReplied;
-	public boolean commentsWhereIComment;
-	public boolean informationAndPromotion;
+	private int id;
+	private boolean myCommentsReplied;
+	private boolean commentsWhereIComment;
+	private boolean informationAndPromotion;
 	
 	public int getId() {
 		return id;

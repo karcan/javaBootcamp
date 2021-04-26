@@ -9,8 +9,8 @@ public class State {
 		this.setName(name);
 	}
 	
-	public int id;
-	public String name;
+	private int id;
+	private String name;
 	
 	public int getId() {
 		return id;

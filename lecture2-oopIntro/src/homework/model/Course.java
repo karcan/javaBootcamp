@@ -7,7 +7,7 @@ public class Course {
 	public Course() {} 
 	
 	public Course(int id, int instructorId, int categoryId, String name, String shortDescription, String longDescription, double sellingPrice, Date startDate, Date endDate) {
-		this.setId(categoryId);
+		this.setId(id);
 		this.setInstructorId(instructorId);
 		this.setCategoryId(categoryId);
 		this.setName(name);

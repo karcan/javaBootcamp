@@ -42,7 +42,7 @@ public class Main {
 		studentService.add(student5);
 		
 		// update student before get all list 
-		student4.name = "Pınar";
+		student4.setName("Pınar");
 		studentService.update(student4);
 		
 		// delete student before get all list
@@ -54,11 +54,11 @@ public class Main {
 		System.out.println("|id|name|surname|");
 		System.out.println("|---|---|---|");
 		for (Student student : studentService.getAll()) {
-			System.out.println("|" + student.id + "|" + student.name + "|" + student.surname + "|");
+			System.out.println("|" + student.getId() + "|" + student.getName() + "|" + student.getSurname() + "|");
 		} 
 		
 		// get student by id;
-		System.out.println("Get student by id : " + studentService.getById(2).name);
+		System.out.println("Get student by id : " + studentService.getById(2).getName());
 	}
 	
 	private static void lectureTest() { 
@@ -82,7 +82,7 @@ public class Main {
 		System.out.println("|id|courseId|name|date|");
 		System.out.println("|---|---|---|---|");
 		for (Lecture lecture : lectureService.getAll()) {
-			System.out.println("|"+ lecture.id + "|" + lecture.courseId + "|" + lecture.name + "|" + lecture.date + "|");
+			System.out.println("|"+ lecture.getId() + "|" + lecture.getCourseId() + "|" + lecture.getName() + "|" + lecture.getDate() + "|");
 		}
 		
 		// get lectures by id.
@@ -90,7 +90,7 @@ public class Main {
 		System.out.println("");
 		System.out.println("|id|courseId|name|date|");
 		System.out.println("|---|---|---|---|");
-		System.out.println("|"+ lectureById.id + "|" + lectureById.courseId + "|" + lectureById.name + "|" + lectureById.date + "|");
+		System.out.println("|"+ lectureById.getId() + "|" + lectureById.getCourseId() + "|" + lectureById.getName() + "|" + lectureById.getDate() + "|");
 
 		
 		// get lectures by courseId.
@@ -98,7 +98,7 @@ public class Main {
 		System.out.println("|id|courseId|name|date|");
 		System.out.println("|---|---|---|---|");
 		for (Lecture lecture : lectureService.getAllByCourseId(1)) {
-			System.out.println("|"+ lecture.id + "|" + lecture.courseId + "|" + lecture.name + "|" + lecture.date + "|");
+			System.out.println("|"+ lecture.getId() + "|" + lecture.getCourseId() + "|" + lecture.getName() + "|" + lecture.getDate() + "|");
 		}
 	}
 }

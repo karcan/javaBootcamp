@@ -17,7 +17,7 @@ public class InstructorService {
 	public void add(Instructor instructor) {
 		
 		this._instructors.add(instructor);
-		System.out.println(instructor.name + " " + Message.Added);
+		System.out.println(instructor.getName() + " " + Message.Added);
 	}
 	
 	public void update(Instructor instructor) {
@@ -25,7 +25,7 @@ public class InstructorService {
 		int instructorIndex = this._instructors.indexOf(instructor);
 		
 		this._instructors.set(instructorIndex, instructor);
-		System.out.println(instructor.name + " " + Message.Updated);
+		System.out.println(instructor.getName() + " " + Message.Updated);
 	}
 	
 	public void delete(Instructor instructor) {
@@ -33,11 +33,11 @@ public class InstructorService {
 		int instructorIndex = this._instructors.indexOf(instructor);
 		
 		this._instructors.remove(instructorIndex);
-		System.out.println(instructor.name + " " + Message.Updated);
+		System.out.println(instructor.getName() + " " + Message.Updated);
 	}
 	
 	public Instructor getById(int id) {
-		return this._instructors.stream().filter(u -> u.id == id).findFirst().get();
+		return this._instructors.stream().filter(u -> u.getId() == id).findFirst().get();
 	}
 	
 	public List<Instructor> getAll() {
