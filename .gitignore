@@ -1,2 +1,4 @@
 .plugins
-.plugins/
+.plugins\
+.metadata
+.metadata\
