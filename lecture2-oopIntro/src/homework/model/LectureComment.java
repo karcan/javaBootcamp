@@ -20,4 +20,46 @@ public class LectureComment {
 	public Date date;
 	public Integer parentId;
 	
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public int getLectureId() {
+		return lectureId;
+	}
+
+	public void setLectureId(int lectureId) {
+		this.lectureId = lectureId;
+	}
+
+	public int getUserId() {
+		return userId;
+	}
+
+	public void setUserId(int userId) {
+		this.userId = userId;
+	}
+
+	public Date getDate() {
+		return date;
+	}
+
+	public void setDate(Date date) {
+		this.date = date;
+	}
+
+	public Integer getParentId() {
+		return parentId;
+	}
+
+	public void setParentId(Integer parentId) {
+		this.parentId = parentId;
+	}
+	
+	
+	
 }

@@ -10,4 +10,14 @@ public class InstructorNotificationOption extends UserNotificationOption {
 	}
 	
 	public boolean commentsMyLectures;
+
+	public boolean isCommentsMyLectures() {
+		return commentsMyLectures;
+	}
+
+	public void setCommentsMyLectures(boolean commentsMyLectures) {
+		this.commentsMyLectures = commentsMyLectures;
+	}
+	
+	
 }

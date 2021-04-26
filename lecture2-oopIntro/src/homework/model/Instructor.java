@@ -10,4 +10,14 @@ public class Instructor extends User {
 	}
 	
 	public String about;
+
+	public String getAbout() {
+		return about;
+	}
+
+	public void setAbout(String about) {
+		this.about = about;
+	}
+	
+	
 }
