@@ -1,11 +1,13 @@
-# All students list : 
+# Student Service
+
+### All students list : 
 ```Java
 // get all student list. 
 for (Student student : studentService.getAll()) {
   System.out.println(student.id + ", " + student.name + ", " + student.surname);
 } 
 ```
-# Result : 
+### Result : 
 |id|name|surname|
 |---|---|---|
 |1|Karcan|Özbal|
@@ -14,13 +16,16 @@ for (Student student : studentService.getAll()) {
 
 * * *
 
-# Get student by id : 
+### Get student by id : 
 ```Java
 Student student = studentService.getById(2);
 System.out.println(student.id + ", " + student.name + ", " + student.surname);
 ```
-# Result : 
+### Result : 
 |id|name|surname|
 |---|---|---|
 |2|Ömer|Acar|
 
+* * *
+
+# Lecture Service
