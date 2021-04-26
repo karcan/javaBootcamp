@@ -23,7 +23,6 @@ public class CourseService {
 		this._courses.add(course);
 		System.out.println(course.name + " "  + Messages.Added);
 	}
-	
 	public void update(Course course) {
 		
 		int courseIndex = this._courses.indexOf(course);
@@ -31,7 +30,6 @@ public class CourseService {
 		this._courses.set(courseIndex, course);
 		System.out.println(course.name + " " + Messages.Updated);
 	}
-	
 	public void delete(Course course) {
 		
 		int courseIndex = this._courses.indexOf(course);
@@ -39,11 +37,6 @@ public class CourseService {
 		this._courses.remove(courseIndex);
 		System.out.println(course.name + " " + Messages.Deleted);
 	}
-	
-	public Course getById(int id) {
-		return this._courses.stream().filter(c -> c.id == id).findFirst().get();
-	}
-	
 	public List<Course> getAll() {
 		return _courses;
 	}

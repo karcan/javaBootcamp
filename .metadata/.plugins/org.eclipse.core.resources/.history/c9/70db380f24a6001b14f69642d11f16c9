@@ -43,10 +43,6 @@ public class LectureService {
 		System.out.println(lecture.name + " " + Messages.Deleted);
 	}
 	
-	public Lecture getById(int id) {
-		return _lectures.stream().filter(l -> l.id == id).findFirst().get();
-	}
-	
 	public List<Lecture>  getAll() {
 		return _lectures;
 	}

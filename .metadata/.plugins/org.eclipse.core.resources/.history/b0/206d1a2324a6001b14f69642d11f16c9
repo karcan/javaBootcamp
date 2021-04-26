@@ -52,7 +52,7 @@ public class UserService {
 		System.out.println(user.name + " " + Messages.Deleted);
 	}
 	
-	public User getById(int id) {
+public User getById(int id) {
 		
 		return _users.stream().filter(u -> u.id == id).findFirst().get();
 	}
@@ -60,6 +60,7 @@ public class UserService {
 	public List<User> getAll() {
 		return _users;
 	}
+	
 	
 	private boolean checkNameLength(User user) {
 		

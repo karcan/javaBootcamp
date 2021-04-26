@@ -41,7 +41,7 @@ public class CourseService {
 	}
 	
 	public Course getById(int id) {
-		return this._courses.stream().filter(c -> c.id == id).findFirst().get();
+		
 	}
 	
 	public List<Course> getAll() {
