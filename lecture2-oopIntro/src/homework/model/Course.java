@@ -7,15 +7,15 @@ public class Course {
 	public Course() {} 
 	
 	public Course(int id, int instructorId, int categoryId, String name, String shortDescription, String longDescription, double sellingPrice, Date startDate, Date endDate) {
-		this.id = id;
-		this.instructorId = instructorId;
-		this.categoryId = categoryId;
-		this.name = name;
-		this.shortDescription = shortDescription;
-		this.longDescription = longDescription;
-		this.sellingPrice = sellingPrice;
-		this.startDate = startDate;
-		this.endDate = endDate;
+		this.setId(categoryId);
+		this.setInstructorId(instructorId);
+		this.setCategoryId(categoryId);
+		this.setName(name);
+		this.setShortDescription(shortDescription);
+		this.setLongDescription(longDescription);
+		this.setSellingPrice(sellingPrice);
+		this.setStartDate(startDate);
+		this.setEndDate(endDate);
 	}
 
 	private int id;

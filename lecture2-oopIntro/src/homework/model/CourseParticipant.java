@@ -7,10 +7,10 @@ public class CourseParticipant {
 	public CourseParticipant() {} 
 	
 	public CourseParticipant(int id, int courseId, int studentId, Date date) {
-		this.id = id;
-		this.courseId = courseId;
-		this.studentId = studentId;
-		this.date = date;
+		this.setId(studentId);
+		this.setCourseId(courseId);
+		this.setStudentId(studentId);
+		this.setDate(date);
 	}
 	
 	public int id;

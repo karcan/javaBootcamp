@@ -5,14 +5,14 @@ public class UserAddress {
 	public UserAddress() {} 
 	
 	public UserAddress(int id, int userId, int countryId, String street1, String street2, String city, int stateId, String zipCode) {
-		this.id = id;
-		this.userId = userId;
-		this.countryId = countryId;
-		this.street1 = street1;
-		this.street2 = street2;
-		this.city = city;
-		this.stateId = stateId;
-		this.zipCode = zipCode;
+		this.setId(stateId);
+		this.setUserId(userId);
+		this.setCountryId(countryId);
+		this.setStreet1(street1);
+		this.setStreet2(street2);
+		this.setCity(city);
+		this.setStateId(stateId);
+		this.setZipCode(zipCode);
 	}
 	
 	public int id;

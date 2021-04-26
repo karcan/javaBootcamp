@@ -7,11 +7,11 @@ public class LectureComment {
 	public LectureComment() {} 
 	
 	public LectureComment(int id, int lectureId, int userId, Date date, Integer parentId) {
-		this.id = id;
-		this.lectureId = lectureId;
-		this.userId = userId;
-		this.date = date;
-		this.parentId = parentId;
+		this.setId(userId);
+		this.setLectureId(lectureId);
+		this.setUserId(userId);
+		this.setDate(date);
+		this.setParentId(parentId);
 	}
 
 	public int id;

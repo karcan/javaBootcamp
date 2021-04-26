@@ -5,10 +5,10 @@ public class UserNotificationOption {
 	public UserNotificationOption() {} 
 	
 	public UserNotificationOption(int id, boolean myCommentsReplied, boolean commentsWhereIComment, boolean informationAndPromotion) {
-		this.id = id;
-		this.myCommentsReplied = myCommentsReplied;
-		this.commentsWhereIComment = commentsWhereIComment;
-		this.informationAndPromotion = informationAndPromotion;
+		this.setId(id);
+		this.setMyCommentsReplied(myCommentsReplied);
+		this.setCommentsWhereIComment(commentsWhereIComment);
+		this.setInformationAndPromotion(informationAndPromotion);
 	}
 	
 	public int id;

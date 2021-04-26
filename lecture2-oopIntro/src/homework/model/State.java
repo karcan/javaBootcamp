@@ -5,8 +5,8 @@ public class State {
 	public State() {} 
 	
 	public State(int id, String name) {
-		this.id = id;
-		this.name = name;
+		this.setId(id);
+		this.setName(name);
 	}
 	
 	public int id;
