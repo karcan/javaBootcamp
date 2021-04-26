@@ -4,6 +4,7 @@ import java.util.Date;
 
 import homework.model.Lecture;
 import homework.model.Student;
+import homework.model.User;
 import homework.service.LectureService;
 import homework.service.StudentService;
 
