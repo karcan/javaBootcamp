@@ -10,16 +10,9 @@ import homework.services.UserService;
 public class Main {
 
 	public static void main(String[] args) {
-		
-		userTest();
-		System.out.println("");
-		lectureTest();
-
-		
-	}
-	
-	private static void userTest() {
-
+		/**
+		 * User Service
+		 */
 		UserService userService = new UserService();
 		
 		User user1 = new User(1,"Karcan","Özbal","karcanozbal@outlook.com.tr","karcan","deneme12345");
@@ -57,9 +50,14 @@ public class Main {
 		
 		// get user by id;
 		System.out.println(userService.getById(2).name);
-	}
-	
-	private static void lectureTest() {
+		
+		// -----------------------------------------------------------------
+		
+		
+		/**
+		 * Lecture Service
+		 */
+		System.out.println("");
 		LectureService lectureService = new LectureService();
 		
 		Lecture lecture1 = new Lecture(1,1,"Ders 1",new Date());
@@ -98,5 +96,8 @@ public class Main {
 		for (Lecture lecture : lectureService.getAllByCourseId(1)) {
 			System.out.println(lecture.id + "	" + lecture.courseId + "		" + lecture.name + "	" + lecture.date);
 		}
+		
+		
 	}
+
 }

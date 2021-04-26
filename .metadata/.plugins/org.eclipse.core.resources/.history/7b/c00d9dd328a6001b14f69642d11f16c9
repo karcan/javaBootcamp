@@ -12,14 +12,16 @@ public class Main {
 	public static void main(String[] args) {
 		
 		userTest();
-		System.out.println("");
-		lectureTest();
+		
 
 		
 	}
 	
 	private static void userTest() {
 
+		/**
+		 * User Service
+		 */
 		UserService userService = new UserService();
 		
 		User user1 = new User(1,"Karcan","Özbal","karcanozbal@outlook.com.tr","karcan","deneme12345");

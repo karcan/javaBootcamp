@@ -12,15 +12,14 @@ public class Main {
 	public static void main(String[] args) {
 		
 		userTest();
-		System.out.println("");
-		lectureTest();
+		
 
 		
 	}
 	
 	private static void userTest() {
 
-		UserService userService = new UserService();
+Service userService = new UserService();
 		
 		User user1 = new User(1,"Karcan","Özbal","karcanozbal@outlook.com.tr","karcan","deneme12345");
 		User user2 = new User(2,"Ömer","Acar","acar.0mer@hotmail.com","omer","deneme12345");
