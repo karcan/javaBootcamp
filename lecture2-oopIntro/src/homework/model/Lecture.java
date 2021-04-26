@@ -4,7 +4,7 @@ import java.util.Date;
 
 public class Lecture {
 	
-	public Lecture() {}
+	public Lecture() {} 
 	
 	public Lecture(int id, int courseId, String name, Date date) {
 		this.id = id;

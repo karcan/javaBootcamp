@@ -3,7 +3,7 @@ package homework.constant;
 public class Message {
 	public static String Added = "added.";
 	public static String Updated = "updated.";
-	public static String Deleted = "deleted.";
+	public static String Deleted = "deleted."; 
 	
 	public static String limitExceeded = "limit exceeded.";
 	public static String canNotBeNull = "cannot be null";

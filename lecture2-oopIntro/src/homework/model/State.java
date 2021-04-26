@@ -2,7 +2,7 @@ package homework.model;
 
 public class State {
 	
-	public State() {}
+	public State() {} 
 	
 	public State(int id, String name) {
 		this.id = id;

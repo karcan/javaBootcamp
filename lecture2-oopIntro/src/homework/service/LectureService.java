@@ -11,7 +11,7 @@ public class LectureService {
 	
 	private List<Lecture> _lectures;
 	
-	public LectureService() {
+	public LectureService() { 
 		this._lectures =  new ArrayList<Lecture>();
 	}
 	

@@ -4,7 +4,7 @@ import java.util.Date;
 
 public class LectureComment {
 	
-	public LectureComment() {}
+	public LectureComment() {} 
 	
 	public LectureComment(int id, int lectureId, int userId, Date date, Integer parentId) {
 		this.id = id;

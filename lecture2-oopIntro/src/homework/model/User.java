@@ -2,7 +2,7 @@ package homework.model;
 
 public class User {
 	
-	public User() {}
+	public User() {} 
 	
 	public User(int id, String name, String surname, String mail, String username, String password) {
 		this.id = id;

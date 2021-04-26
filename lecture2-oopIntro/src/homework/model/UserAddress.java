@@ -2,7 +2,7 @@ package homework.model;
 
 public class UserAddress {
 	
-	public UserAddress() {}
+	public UserAddress() {} 
 	
 	public UserAddress(int id, int userId, int countryId, String street1, String street2, String city, int stateId, String zipCode) {
 		this.id = id;

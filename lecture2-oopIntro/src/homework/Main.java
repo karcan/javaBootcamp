@@ -61,7 +61,7 @@ public class Main {
 		System.out.println("Get student by id : " + studentService.getById(2).name);
 	}
 	
-	private static void lectureTest() {
+	private static void lectureTest() { 
 		LectureService lectureService = new LectureService();
 		
 		Lecture lecture1 = new Lecture(1,1,"Ders 1",new Date());

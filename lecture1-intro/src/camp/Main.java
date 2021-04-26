@@ -4,8 +4,6 @@ public class Main {
 
 	public static void main(String[] args) {
 		
-		// TODO Auto-generated method stub
-
 		// don't repeat yourself
 		String enterText = "İnternet şubeye gir.";
 		double yesterdayDollar = 8.15;
