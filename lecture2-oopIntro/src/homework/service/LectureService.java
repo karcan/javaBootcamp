@@ -5,14 +5,18 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import homework.constant.Message;
+import homework.dto.LectureDto;
+import homework.model.Course;
 import homework.model.Lecture;
 
 public class LectureService {
 	
 	private List<Lecture> _lectures;
+	private CourseService _courseService;
 	
 	public LectureService() { 
 		this._lectures =  new ArrayList<Lecture>();
+		this._courseService = new CourseService();
 	}
 	
 	public void add(Lecture lecture) {
@@ -41,6 +45,18 @@ public class LectureService {
 		
 		this._lectures.remove(lectureIndex);
 		System.out.println(lecture.getName() + " " + Message.Deleted);
+	}
+	
+	public List<LectureDto> getLectureDto() {
+		return _lectures.stream().map(l -> {
+			Course course = this._courseService.getById(l.getCourseId());		
+			return new LectureDto(
+					l.getId(), 
+					course.getName(), 
+					l.getName(), 
+					l.getDate()
+					);
+		}).collect(Collectors.toList());
 	}
 	
 	public Lecture getById(int id) {

@@ -60,6 +60,7 @@ public class CourseService {
 					instructor.getName() + " " + instructor.getSurname(),
 					category.getName()
 					);
+			
 		}).collect(Collectors.toList());
 	}
 	
