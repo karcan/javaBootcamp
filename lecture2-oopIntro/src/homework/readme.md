@@ -85,12 +85,10 @@ for (Lecture lecture : lectureService.getAllByCourseId(1)) {
 ```Java
 CourseService courseService = new CourseService();
 courseService.add(new Course(1,1,1,"Java & Reach Yazılım Geliştirme Kampı","","",0,new Date(), new Date()));
-courseService.add(new Course(1,1,2,"C# & Angular Yazılım Geliştirme Kampı","","",0,new Date(), new Date()));
+courseService.add(new Course(2,1,2,"C# & Angular Yazılım Geliştirme Kampı","","",0,new Date(), new Date()));
 
-System.out.println("|id|courseName|categoryName|instructorName|");
-System.out.println("|---|---|---|---|");
 courseService.getCourseDto().forEach(c->{
-  System.out.println("|" + c.id + "|" + c.courseName + "|" + c.categoryName + "|" + c.instructorName + "|");
+  System.out.println(c.id + ", " + c.courseName + ", " + c.categoryName + ", " + c.instructorName);
 });
 ```
 
