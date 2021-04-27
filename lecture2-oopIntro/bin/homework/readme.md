@@ -96,4 +96,4 @@ courseService.getCourseDto().forEach(c->{
 |id|courseName|categoryName|instructorName|
 |---|---|---|---|
 |1|Java & Reach Yazılım Geliştirme Kampı|Java|Engin Demiroğ|
-|1|C# & Angular Yazılım Geliştirme Kampı|C#|Engin Demiroğ|
+|2|C# & Angular Yazılım Geliştirme Kampı|C#|Engin Demiroğ|

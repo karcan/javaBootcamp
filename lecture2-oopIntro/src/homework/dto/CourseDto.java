@@ -9,8 +9,23 @@ public class CourseDto {
 		this.categoryName = categoryName;
 	}
 	
-	public final int id;
-	public final String courseName;
-	public final String instructorName;
-	public final String categoryName;
+	private final int id;
+	private final String courseName;
+	private final String instructorName;
+	private final String categoryName;
+	
+	public int getId() {
+		return id;
+	}
+	public String getCourseName() {
+		return courseName;
+	}
+	public String getInstructorName() {
+		return instructorName;
+	}
+	public String getCategoryName() {
+		return categoryName;
+	}
+	
+	
 }

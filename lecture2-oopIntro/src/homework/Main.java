@@ -30,7 +30,7 @@ public class Main {
 		System.out.println("|id|courseName|categoryName|instructorName|");
 		System.out.println("|---|---|---|---|");
 		courseService.getCourseDto().forEach(c->{
-			System.out.println("|" + c.id + "|" + c.courseName + "|" + c.categoryName + "|" + c.instructorName + "|");
+			System.out.println("|" + c.getId() + "|" + c.getCourseName() + "|" + c.getCategoryName() + "|" + c.getInstructorName() + "|");
 		});
 	}
 	
