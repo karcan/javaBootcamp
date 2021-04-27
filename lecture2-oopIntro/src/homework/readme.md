@@ -77,3 +77,25 @@ for (Lecture lecture : lectureService.getAllByCourseId(1)) {
 |4|1|Ders 4|Mon Apr 26 11:59:46 TRT 2021|
 |5|1|Ders 5|Mon Apr 26 11:59:46 TRT 2021|
 
+* * *
+
+# Course Dto
+
+### Get course dto : 
+```Java
+CourseService courseService = new CourseService();
+courseService.add(new Course(1,1,1,"Java & Reach Yazılım Geliştirme Kampı","","",0,new Date(), new Date()));
+courseService.add(new Course(1,1,2,"C# & Angular Yazılım Geliştirme Kampı","","",0,new Date(), new Date()));
+
+System.out.println("|id|courseName|categoryName|instructorName|");
+System.out.println("|---|---|---|---|");
+courseService.getCourseDto().forEach(c->{
+  System.out.println("|" + c.id + "|" + c.courseName + "|" + c.categoryName + "|" + c.instructorName + "|");
+});
+```
+
+### Result : 
+|id|courseName|categoryName|instructorName|
+|---|---|---|---|
+|1|Java & Reach Yazılım Geliştirme Kampı|Java|Engin Demiroğ|
+|1|C# & Angular Yazılım Geliştirme Kampı|C#|Engin Demiroğ|
