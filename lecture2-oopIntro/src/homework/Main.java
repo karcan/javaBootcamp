@@ -80,11 +80,11 @@ public class Main {
 	private static void lectureTest() { 
 		LectureService lectureService = new LectureService();
 		
-		Lecture lecture1 = new Lecture(1,1,"Ders 1",new Date());
-		Lecture lecture2 = new Lecture(2,1,"Ders 2",new Date());
-		Lecture lecture3 = new Lecture(3,1,"Ders 3",new Date());
-		Lecture lecture4 = new Lecture(4,1,"Ders 4",new Date());
-		Lecture lecture5 = new Lecture(5,1,"Ders 5",new Date());
+		Lecture lecture1 = new Lecture(1,1,"Ders 1","",new Date());
+		Lecture lecture2 = new Lecture(2,1,"Ders 2","",new Date());
+		Lecture lecture3 = new Lecture(3,1,"Ders 3","",new Date());
+		Lecture lecture4 = new Lecture(4,1,"Ders 4","",new Date());
+		Lecture lecture5 = new Lecture(5,1,"Ders 5","",new Date());
 		
 		// single adding method.
 		lectureService.add(lecture1);
