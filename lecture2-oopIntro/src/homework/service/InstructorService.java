@@ -12,6 +12,8 @@ public class InstructorService {
 	
 	public InstructorService() { 
 		this._instructors = new ArrayList<Instructor>();
+		
+		this._instructors.add(new Instructor(1, "Engin", "Demiroğ", "", "", "", ""));
 	}
 	
 	public void add(Instructor instructor) {

@@ -2,17 +2,24 @@ package homework.service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import homework.constant.Message;
 import homework.constant.Validation;
+import homework.dto.CourseDto;
 import homework.model.Course;
 
 public class CourseService {
 	
 	private List<Course> _courses; 
+	private CategoryService _categoryService;
+	private InstructorService _InstructorService;
 	
 	public CourseService() {
 		this._courses = new ArrayList<Course>();
+		this._categoryService = new CategoryService();
+		this._InstructorService = new InstructorService();
+		
 	}
 	
 	public void add(Course course) {
@@ -39,6 +46,21 @@ public class CourseService {
 		
 		this._courses.remove(courseIndex);
 		System.out.println(course.getName() + " " + Message.Deleted);
+	}
+	
+	public List<CourseDto> getCourseDto() {
+		return this._courses.stream().map(c -> {
+			
+			var instructor = this._InstructorService.getById(c.getInstructorId());
+			var category = this._categoryService.getById(c.getCategoryId());
+			
+			return new CourseDto(
+					c.getId(), 
+					c.getName(),
+					instructor.getName() + " " + instructor.getSurname(),
+					category.getName()
+					);
+		}).collect(Collectors.toList());
 	}
 	
 	public Course getById(int id) {

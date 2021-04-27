@@ -2,14 +2,20 @@ package homework;
 
 import java.util.Date;
 
+import homework.model.Course;
 import homework.model.Lecture;
 import homework.model.Student;
+import homework.service.CourseService;
 import homework.service.LectureService;
 import homework.service.StudentService;
 
 public class Main {
 
 	public static void main(String[] args) {
+		
+		
+		courseTest();
+		System.out.println("");
 		studentTest();
 		System.out.println("");
 		lectureTest();
@@ -19,7 +25,7 @@ public class Main {
 
 		StudentService studentService = new StudentService();
 		
-		Student student1 = new Student(1,"Karcan","Özbal","karcanozbal@outlook.com.tr","karcan","deneme12345" );
+		Student student1 = new Student(1,"Karcan","Özbal","karcanozbal@outlook.com.tr","karcan","deneme12345");
 		Student student2 = new Student(2,"Ömer","Acar","acar.0mer@hotmail.com","omer","deneme12345");
 		Student student3 = new Student(3,"Uğur","Yıldız","","ugur","deneme12345");
 		Student student4 = new Student(4,"Pinar","Darıcı","","pinar","deneme12345");
@@ -98,4 +104,18 @@ public class Main {
 			System.out.println("|"+ lecture.getId() + "|" + lecture.getCourseId() + "|" + lecture.getName() + "|" + lecture.getDate() + "|");
 		}
 	}
+
+	private static void courseTest() {
+		CourseService courseService = new CourseService();
+		
+		courseService.add(new Course(1,1,1,"Java & Reach Yazılım Geliştirme Kampı","","",0,new Date(), new Date()));
+		courseService.add(new Course(2,1,2,"C# & Angular Yazılım Geliştirme Kampı","","",0,new Date(), new Date()));
+		
+		System.out.println("|id|courseName|categoryName|instructorName|");
+		System.out.println("|---|---|---|---|");
+		courseService.getCourseDto().forEach(c->{
+			System.out.println("|" + c.id + "|" + c.courseName + "|" + c.categoryName + "|" + c.instructorName + "|");
+		});
+	}
+
 }
