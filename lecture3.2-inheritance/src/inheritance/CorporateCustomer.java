@@ -1,8 +1,8 @@
 package inheritance;
 
 public class CorporateCustomer extends Customer {
-	String companyName;
-	String taxNumber;
+	private String companyName;
+	private String taxNumber;
 	
 	public CorporateCustomer() {
 	}
