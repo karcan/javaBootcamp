@@ -12,8 +12,6 @@ import homework.service.StudentService;
 public class Main {
 
 	public static void main(String[] args) {
-		
-		
 		courseTest();
 		System.out.println("");
 		studentTest();
@@ -24,7 +22,7 @@ public class Main {
 	private static void courseTest() {
 		CourseService courseService = new CourseService();
 		
-		courseService.add(new Course(1,1,1,"Java & Reach Yazılım Geliştirme Kampı","","",0,new Date(), new Date()));
+		courseService.add(new Course(1,1,1,"Java & React Yazılım Geliştirme Kampı","","",0,new Date(), new Date()));
 		courseService.add(new Course(2,1,2,"C# & Angular Yazılım Geliştirme Kampı","","",0,new Date(), new Date()));
 		
 		System.out.println("|id|courseName|categoryName|instructorName|");
@@ -118,6 +116,5 @@ public class Main {
 		}
 	}
 
-	
 
 }
