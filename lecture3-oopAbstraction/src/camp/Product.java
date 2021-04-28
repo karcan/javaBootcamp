@@ -8,7 +8,6 @@ public class Product {
 	private double unitPrice;
 	private String detail;
 	private double discount;
-	private double unitPriceAfterDiscount;
 	
 	public Product() {
 		
