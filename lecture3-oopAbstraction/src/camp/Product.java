@@ -64,6 +64,6 @@ public class Product {
 	}
 
 	public double getUnitPriceAfterDiscount() {
-		return unitPriceAfterDiscount;
+		return unitPrice - (unitPrice * discount / 100);
 	}
 }
