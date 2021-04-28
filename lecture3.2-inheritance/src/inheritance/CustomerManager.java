@@ -1,10 +1,15 @@
 package inheritance;
 
 public class CustomerManager {
-	public void add(IndividualCustomer customer) {
-		System.out.println(customer.getCustomerNumber()+" eklendi.");
+	public void add(Customer customer) {
+		System.out.println(customer.getCustomerNumber() + " kaydedildi.");
 	}
-	public void add(CorporateCustomer customer) {
-		System.out.println(customer.getCustomerNumber()+" eklendi.");
+	
+	//bulk insert
+	public void addMultiple(Customer[] customers) {
+		for (Customer customer : customers) {
+			this.add(customer);
+		}
 	}
+	
 }

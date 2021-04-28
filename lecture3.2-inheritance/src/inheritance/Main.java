@@ -9,9 +9,11 @@ public class Main {
 		CorporateCustomer hepsiBurada = new CorporateCustomer();
 		hepsiBurada.setCustomerNumber("78910");
 		
+		SyndicateCustomer syndicateCustomer = new SyndicateCustomer();
+		syndicateCustomer.setCustomerNumber("99999");
+		
 		CustomerManager customerManager = new CustomerManager();
-		customerManager.add(engin);
-		customerManager.add(hepsiBurada);
+		customerManager.addMultiple(new Customer[] {engin,hepsiBurada,syndicateCustomer});
 		
 	}
 }
