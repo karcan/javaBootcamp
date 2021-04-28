@@ -2,6 +2,8 @@ package homework.model;
 
 public class Instructor extends User {
 	
+	private String about;
+	
 	public Instructor() {}
 	 
 	public Instructor(int id, String name, String surname, String mail, String username, String password, String about) {
@@ -9,8 +11,6 @@ public class Instructor extends User {
 		this.setAbout(about);
 	}
 	
-	private String about;
-
 	public String getAbout() {
 		return about;
 	}

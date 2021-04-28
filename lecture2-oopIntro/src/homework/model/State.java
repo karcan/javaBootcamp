@@ -2,15 +2,15 @@ package homework.model;
 
 public class State {
 	
+	private int id;
+	private String name;
+	
 	public State() {} 
 	
 	public State(int id, String name) {
 		this.setId(id);
 		this.setName(name);
-	}
-	
-	private int id;
-	private String name;
+	}	
 	
 	public int getId() {
 		return id;

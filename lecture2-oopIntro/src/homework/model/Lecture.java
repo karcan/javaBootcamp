@@ -2,7 +2,13 @@ package homework.model;
 
 import java.util.Date;
 
-public class Lecture {
+public class Lecture {	
+	
+	private int id;
+	private int courseId;
+	private String name;
+	private String description;
+	private Date date;
 	
 	public Lecture() {} 
 	
@@ -13,12 +19,6 @@ public class Lecture {
 		this.setDescription(description);
 		this.setDate(date);
 	}
-	
-	private int id;
-	private int courseId;
-	private String name;
-	private String description;
-	private Date date;
 	
 	public int getId() {
 		return id;

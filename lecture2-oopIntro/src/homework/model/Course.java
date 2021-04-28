@@ -4,6 +4,16 @@ import java.util.Date;
 
 public class Course {
 	
+	private int id;
+	private int instructorId;
+	private int categoryId;
+	private String name;
+	private String shortDescription;
+	private String longDescription;
+	private double sellingPrice;
+	private Date startDate;
+	private Date endDate;
+	
 	public Course() {} 
 	
 	public Course(int id, int instructorId, int categoryId, String name, String shortDescription, String longDescription, double sellingPrice, Date startDate, Date endDate) {
@@ -17,16 +27,6 @@ public class Course {
 		this.setStartDate(startDate);
 		this.setEndDate(endDate);
 	}
-
-	private int id;
-	private int instructorId;
-	private int categoryId;
-	private String name;
-	private String shortDescription;
-	private String longDescription;
-	private double sellingPrice;
-	private Date startDate;
-	private Date endDate;
 	
 	public int getId() {
 		return id;

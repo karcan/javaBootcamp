@@ -4,6 +4,12 @@ import java.util.Date;
 
 public class LectureComment {
 	
+	private int id;
+	private int lectureId;
+	private int userId;
+	private Date date;
+	private Integer parentId;
+	
 	public LectureComment() {} 
 	
 	public LectureComment(int id, int lectureId, int userId, Date date, Integer parentId) {
@@ -13,12 +19,6 @@ public class LectureComment {
 		this.setDate(date);
 		this.setParentId(parentId);
 	}
-
-	private int id;
-	private int lectureId;
-	private int userId;
-	private Date date;
-	private Integer parentId;
 	
 	public int getId() {
 		return id;

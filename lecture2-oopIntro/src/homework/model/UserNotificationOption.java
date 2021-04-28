@@ -1,6 +1,11 @@
 package homework.model;
 
 public class UserNotificationOption {
+	
+	private int id;
+	private boolean myCommentsReplied;
+	private boolean commentsWhereIComment;
+	private boolean informationAndPromotion;
 
 	public UserNotificationOption() {} 
 	
@@ -10,12 +15,7 @@ public class UserNotificationOption {
 		this.setCommentsWhereIComment(commentsWhereIComment);
 		this.setInformationAndPromotion(informationAndPromotion);
 	}
-	
-	private int id;
-	private boolean myCommentsReplied;
-	private boolean commentsWhereIComment;
-	private boolean informationAndPromotion;
-	
+
 	public int getId() {
 		return id;
 	}

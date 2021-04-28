@@ -4,6 +4,11 @@ import java.util.Date;
 
 public class CourseParticipant {
 	
+	private int id;
+	private int courseId;
+	private int studentId;
+	private Date date;
+	
 	public CourseParticipant() {} 
 	
 	public CourseParticipant(int id, int courseId, int studentId, Date date) {
@@ -12,11 +17,6 @@ public class CourseParticipant {
 		this.setStudentId(studentId);
 		this.setDate(date);
 	}
-	
-	private int id;
-	private int courseId;
-	private int studentId;
-	private Date date;
 	
 	public int getId() {
 		return id;

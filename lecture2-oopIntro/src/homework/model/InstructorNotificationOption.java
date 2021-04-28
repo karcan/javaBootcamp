@@ -2,6 +2,8 @@ package homework.model;
 
 public class InstructorNotificationOption extends UserNotificationOption {
 	
+	private boolean commentsMyLectures;
+	
 	public InstructorNotificationOption() {} 
 	
 	public InstructorNotificationOption(int id, boolean myCommentsReplied, boolean commentsWhereIComment, boolean informationAndPromotion, boolean commentsMyLectures) {
@@ -9,8 +11,6 @@ public class InstructorNotificationOption extends UserNotificationOption {
 		this.setCommentsMyLectures(commentsMyLectures);
 	}
 	
-	private boolean commentsMyLectures;
-
 	public boolean isCommentsMyLectures() {
 		return commentsMyLectures;
 	}

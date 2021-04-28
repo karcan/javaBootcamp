@@ -2,6 +2,13 @@ package homework.model;
 
 public class User {
 	
+	private int id;
+	private String name;
+	private String surname;
+	private String mail;
+	private String username;
+	private String password;
+	
 	public User() {} 
 	
 	public User(int id, String name, String surname, String mail, String username, String password) {
@@ -12,13 +19,7 @@ public class User {
 		this.setUsername(username);
 		this.setPassword(password);
 	}
-	
-	private int id;
-	private String name;
-	private String surname;
-	private String mail;
-	private String username;
-	private String password;
+
 	
 	public int getId() {
 		return id;
