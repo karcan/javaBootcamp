@@ -6,6 +6,7 @@ public class Main {
 	public static void main(String[] args) {
 		
 		Product product1 = new Product(1, "Lenovo V14", 15000, "16 GB Ram",10);
+		System.out.println(product1.getName());
 
 		Product product2 = new Product();
 		product2.setId(2);
