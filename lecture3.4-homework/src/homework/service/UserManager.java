@@ -27,7 +27,7 @@ public class UserManager {
 		System.out.println(user.getFirstName()+" "+user.getLastName() + " deleted.");
 	}
 	
-	public Course[] getUserCourses(int userId) {
+	public Course[] getCourses(int userId) {
 		System.out.println("user courses listed.");
 		return new Course[] {};
 	}
@@ -57,7 +57,6 @@ public class UserManager {
 			System.out.println("Mail adress is incorrect.");
 			return false;
 		}
-		
 		return true;
 	}
 

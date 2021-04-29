@@ -7,16 +7,18 @@ public class User {
 	private String email;
 	private String username;
 	private String password;
+	private String avatarUrl;
 	
 	public User() {}
 
-	public User(int id, String firstName, String lastName, String email, String username, String password) {
+	public User(int id, String firstName, String lastName, String email, String username, String password, String avatarUrl) {
 		this.id = id;
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.email = email;
 		this.username = username;
 		this.password = password;
+		this.avatarUrl = avatarUrl;
 	}
 
 	public int getId() {
@@ -54,5 +56,13 @@ public class User {
 	}
 	public void setPassword(String password) {
 		this.password = password;
+	}
+
+	public String getAvatarUrl() {
+		return avatarUrl;
+	}
+
+	public void setAvatarUrl(String avatarUrl) {
+		this.avatarUrl = avatarUrl;
 	}
 }

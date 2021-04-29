@@ -1,5 +1,6 @@
 package homework.service;
 
+import homework.model.Course;
 import homework.model.Student;
 
 public class StudentManager extends UserManager{
@@ -19,6 +20,12 @@ public class StudentManager extends UserManager{
 		}
 		
 		super.update(student); 
+	}
+	
+	@Override
+	public Course[] getCourses(int studentId) {
+		System.out.println("student's courses listed.");
+		return new Course[] {};
 	}
 	
 	private boolean checkUsernameLength(Student student) {
