@@ -18,7 +18,7 @@ public class StudentManager extends UserManager{
 			return;
 		}
 		
-		super.update(student); 
+		super.update(student);  
 	}
 	
 	private boolean checkUsernameLength(Student student) {
