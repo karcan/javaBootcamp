@@ -5,8 +5,4 @@ Lectures and Homeworks.
 
 * * *
 
-<details>
-<summary>Lectures : </summary>
-asd
-  as
-</details>
+**Table of Contents**
