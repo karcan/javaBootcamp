@@ -1,3 +1,4 @@
+package interfaces;
 
 public class SmsLogger implements Logger {
 

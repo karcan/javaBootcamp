@@ -1,3 +1,4 @@
+package interfaces;
 
 public class DatabaseLogger implements Logger {
 
