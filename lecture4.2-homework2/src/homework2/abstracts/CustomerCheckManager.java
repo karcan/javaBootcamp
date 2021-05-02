@@ -1,8 +1,10 @@
 package homework2.abstracts;
 
+
 import java.time.LocalDate;
 import java.time.Period;
 import java.time.ZoneId;
+
 
 import homework2.entities.Customer;
 import homework2.interfaces.CustomerCheckService;
@@ -12,6 +14,7 @@ public class CustomerCheckManager implements CustomerCheckService {
 
 	@Override
 	public Result CheckPersonIdentity(Customer customer) {
+		
 		return new homework2.models.Result(true);
 	}
 

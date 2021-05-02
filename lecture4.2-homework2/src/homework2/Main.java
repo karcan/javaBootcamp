@@ -3,6 +3,7 @@ package homework2;
 import java.util.GregorianCalendar;
 
 import homework2.abstracts.CustomerCheckManager;
+import homework2.adapters.MernisAdapter;
 import homework2.entities.Customer;
 import homework2.interfaces.CustomerService;
 import homework2.services.StarbucksCustomerManager;
@@ -13,11 +14,12 @@ public class Main {
 
 		Customer enginCustomer = new Customer();
 		enginCustomer.setId(1);
-		enginCustomer.setFirstName("Engin");
-		enginCustomer.setLastName("Demiroğ");
-		enginCustomer.setBirthDate(new GregorianCalendar(1986, 5 , 1).getTime());
+		enginCustomer.setIdentityNumber("000000000");
+		enginCustomer.setFirstName("Karcan");
+		enginCustomer.setLastName("Özbal");
+		enginCustomer.setBirthDate(new GregorianCalendar(1993, 11 , 16).getTime());
 		
-		CustomerService customerService = new StarbucksCustomerManager(new CustomerCheckManager());
+		CustomerService customerService = new StarbucksCustomerManager(new MernisAdapter());
 		customerService.add(enginCustomer);
 	}
 
