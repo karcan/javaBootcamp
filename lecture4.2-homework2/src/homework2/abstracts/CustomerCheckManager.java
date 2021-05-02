@@ -10,16 +10,16 @@ import homework2.entities.Customer;
 import homework2.interfaces.CustomerCheckService;
 import homework2.interfaces.Result;
 
-public class CustomerCheckManager implements CustomerCheckService {
+public  abstract class CustomerCheckManager implements CustomerCheckService {
 
 	@Override
-	public Result CheckPersonIdentity(Customer customer) {
+	public Result CheckIfRealPerson(Customer customer) {
 		
 		return new homework2.models.Result(true);
 	}
 
 	@Override
-	public Result CheckIfSmallerAgeThan(Customer customer, int age) {
+	public final Result CheckIfYoungerAgeThan(Customer customer, int age) {
 		LocalDate todayDateTime = LocalDate.now();
 		LocalDate birthDate = customer.getBirthDate().toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
 		int yearDifference = Period.between(birthDate, todayDateTime).getYears();

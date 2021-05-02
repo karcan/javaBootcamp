@@ -20,8 +20,8 @@ public class StarbucksCustomerManager extends CustomerManager {
 	public void add(Customer customer) {
 
 		Result result =  CheckServiceUtils.runCheckServices(new Result[] {
-				customerCheckService.CheckPersonIdentity(customer), 
-				customerCheckService.CheckIfSmallerAgeThan(customer, 15)
+				customerCheckService.CheckIfRealPerson(customer), 
+				customerCheckService.CheckIfYoungerAgeThan(customer, 15)
 				});
 		
 		if(!result.isSuccess()) {
