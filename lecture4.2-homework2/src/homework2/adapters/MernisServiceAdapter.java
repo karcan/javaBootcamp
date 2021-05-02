@@ -8,7 +8,7 @@ import homework2.entities.Customer;
 import homework2.interfaces.Result;
 import tr.gov.nvi.tckimlik.WS.KPSPublicSoapProxy;
 
-public class MernisAdapter extends CustomerCheckManager  {
+public class MernisServiceAdapter extends CustomerCheckManager  {
 
 	@Override
 	public Result CheckPersonIdentity(Customer customer) {
