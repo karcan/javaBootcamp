@@ -2,7 +2,6 @@ package homework2;
 
 import java.util.GregorianCalendar;
 
-import homework2.abstracts.CustomerCheckManager;
 import homework2.adapters.MernisAdapter;
 import homework2.entities.Customer;
 import homework2.interfaces.CustomerService;
