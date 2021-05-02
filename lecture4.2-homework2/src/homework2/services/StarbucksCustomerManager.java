@@ -1,12 +1,12 @@
 package homework2.services;
 
-import homework2.abstracts.BaseCustomerManager;
+import homework2.abstracts.CustomerManager;
 import homework2.entities.Customer;
 import homework2.interfaces.CustomerCheckService;
 import homework2.interfaces.Result;
 import homework2.utils.CheckServiceUtils;
 
-public class StarbucksCustomerManager extends BaseCustomerManager {
+public class StarbucksCustomerManager extends CustomerManager {
 	
 	private CustomerCheckService customerCheckService;
 	

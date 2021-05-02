@@ -8,7 +8,7 @@ import homework2.entities.Customer;
 import homework2.interfaces.CustomerCheckService;
 import homework2.interfaces.Result;
 
-public class BaseCustomerCheckManager implements CustomerCheckService {
+public class CustomerCheckManager implements CustomerCheckService {
 
 	@Override
 	public Result CheckPersonIdentity(Customer customer) {

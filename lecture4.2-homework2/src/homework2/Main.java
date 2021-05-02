@@ -2,7 +2,7 @@ package homework2;
 
 import java.util.GregorianCalendar;
 
-import homework2.abstracts.BaseCustomerCheckManager;
+import homework2.abstracts.CustomerCheckManager;
 import homework2.entities.Customer;
 import homework2.interfaces.CustomerService;
 import homework2.services.StarbucksCustomerManager;
@@ -17,7 +17,7 @@ public class Main {
 		enginCustomer.setLastName("Demiroğ");
 		enginCustomer.setBirthDate(new GregorianCalendar(1986, 5 , 1).getTime());
 		
-		CustomerService customerService = new StarbucksCustomerManager(new BaseCustomerCheckManager());
+		CustomerService customerService = new StarbucksCustomerManager(new CustomerCheckManager());
 		customerService.add(enginCustomer);
 	}
 
