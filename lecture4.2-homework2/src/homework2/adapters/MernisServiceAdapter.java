@@ -28,9 +28,9 @@ public class MernisServiceAdapter implements RealPersonService{
 		}
 		
 		if(result) {
-			return new homework2.models.Result(true);
+			return new homework2.utils.Result(true);
 		}else {
-			return new homework2.models.Result(false, "kimlik doğrulama başarısız.");
+			return new homework2.utils.Result(false, "kimlik doğrulama başarısız.");
 		}
 			
 	}

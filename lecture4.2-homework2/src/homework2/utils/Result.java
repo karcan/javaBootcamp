@@ -1,4 +1,4 @@
-package homework2.models;
+package homework2.utils;
 
 public class Result implements homework2.interfaces.Result {
 	private boolean success;

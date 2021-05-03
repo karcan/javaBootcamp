@@ -7,6 +7,8 @@
 
 package tr.gov.nvi.tckimlik.WS;
 
+import javax.xml.namespace.QName;
+
 public class KPSPublicLocator extends org.apache.axis.client.Service implements tr.gov.nvi.tckimlik.WS.KPSPublic {
 
     /**
@@ -113,11 +115,11 @@ public class KPSPublicLocator extends org.apache.axis.client.Service implements 
         return new javax.xml.namespace.QName("http://tckimlik.nvi.gov.tr/WS", "KPSPublic");
     }
 
-    private java.util.HashSet ports = null;
+    private java.util.HashSet<QName> ports = null;
 
-    public java.util.Iterator getPorts() {
+    public java.util.Iterator<QName> getPorts() {
         if (ports == null) {
-            ports = new java.util.HashSet();
+            ports = new java.util.HashSet<QName>();
             ports.add(new javax.xml.namespace.QName("http://tckimlik.nvi.gov.tr/WS", "KPSPublicSoap"));
         }
         return ports.iterator();

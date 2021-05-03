@@ -9,6 +9,6 @@ public class CheckServiceUtils {
 				return customerCheckService;
 			}
 		}
-		return new homework2.models.Result(true);
+		return new homework2.utils.Result(true);
 	}
 }
