@@ -52,11 +52,13 @@ public class Main {
 		CampaignService campaignService = new CampaignManager();
 		Campaign campaign1 = new Campaign(1, "CSGOX05", game1, "summer campaign", "", 50, new GregorianCalendar(2021,4,1).getTime(), new GregorianCalendar(2021,5,1).getTime()) ;
 		campaignService.add(campaign1);
+		System.out.println("");
 
 		// Order
 		OrderService orderService = new OrderManager();
 		Order order1 = new Order(1, new Date(), (Player)player1 , game1, campaign1);
 		orderService.add(order1);
+		System.out.println("");
 	}
 
 }

@@ -11,11 +11,21 @@ public class OrderManager implements OrderService {
 
 	@Override
 	public void add(Order order) {
-		System.out.println("---");
-		System.out.println("Product : " + order.getProduct().getName());
-		System.out.println("Price : " + order.getProduct().getSellingPrice());
+		
+		Product product = order.getProduct();
 		this.campaignImplementOperation(order);
-		System.out.println("Order created.");
+		
+		System.out.println("|orderId|productName|sellingPrice|playerName|campaignCode|discountedPrice|");
+		System.out.println("|---|---|---|---|---|---|");
+		System.out.println("|" + order.getId()
+				+ "|" + order.getProduct().getName()
+				+ "|" + order.getProduct().getSellingPrice()
+				+ "|" + order.getPlayer().getFirstName() + " " +order.getPlayer().getLastName()
+				+ "|" + order.getCampaign().getCampaignCode()
+				+ "|" + product.getSellingPrice()
+				);
+
+		
 	}
 
 	@Override
@@ -43,7 +53,8 @@ public class OrderManager implements OrderService {
 		if(campaign != null) {
 			if(now.after(campaign.getStartDate()) && now.before(campaign.getEndDate())) {
 				System.out.println("Campaign implemented : " + campaign.getCampaignCode());
-				System.out.println("Discounted Price : "+ (product.getSellingPrice() - (product.getSellingPrice() * campaign.getDiscountPercent() / 100)));
+				order.getProduct().setSellingPrice((product.getSellingPrice() - (product.getSellingPrice() * campaign.getDiscountPercent() / 100)));
+				System.out.println("Discounted Price : " + product.getSellingPrice() );
 				
 			}else {
 				System.out.println("Campaign is over.");
