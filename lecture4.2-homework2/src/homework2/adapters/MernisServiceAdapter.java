@@ -3,7 +3,6 @@ package homework2.adapters;
 import java.rmi.RemoteException;
 import java.time.ZoneId;
 
-import homework2.abstracts.CustomerCheckManager;
 import homework2.entities.Customer;
 import homework2.interfaces.RealPersonService;
 import homework2.interfaces.Result;
