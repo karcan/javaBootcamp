@@ -1,8 +1,11 @@
 package homework3.Abstract;
 
+import java.util.ArrayList;
+
 import homework3.Entity.Product;
 
-public abstract class BaseProductManager implements ProductService {
+public class BaseProductManager implements ProductService {
+
 	@Override
 	public void add(Product product) {
 		System.out.println(product.getName() + " : eklenmiştir.");
@@ -24,4 +27,11 @@ public abstract class BaseProductManager implements ProductService {
 	public void delete(Product product) {
 		System.out.println(product.getName() + " : silinmiştir.");
 	}
+
+	@Override
+	public ArrayList<Product> getAll() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }

@@ -1,10 +1,9 @@
 package homework3.Abstract;
 
-import homework3.Entity.Order;
+import java.util.Date;
 
 public interface OrderService {
-	void add(Order order);
-	void addBulk(Order[] orders);
-	void update(Order order);
-	void delete(Order order);
+	void add(Date date, int userId, int productId, int campaignId, int quantity, double unitPrice);
+	void update(int orderId, Date date, int userId, int productId, int campaignId, int quantity, double unitPrice);
+	void delete(int orderId);
 }

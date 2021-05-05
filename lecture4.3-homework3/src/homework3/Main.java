@@ -36,8 +36,12 @@ public class Main {
 		
 		// Games
 		ProductService productService = new GameManager();
-		Product game1 = new Game(1, "Counter-Strike: Global Offensive", "Counter-Strike: Global Offensive (CS: GO) expands upon the team-based action gameplay that it pioneered when it was launched 19 years ago.", 35, 2, 1);
-		Product game2 = new Game(2, "Knight Online", "Knight Online is a leading party based medieval MMORPG that is, and will alyways be, Free to Play! Register now and enjoy Knight Online.", 0, 3, 2);
+		Product game1 = new Game(1, "Counter-Strike: Global Offensive", 
+				"Counter-Strike: Global Offensive (CS: GO) expands upon the team-based action gameplay that it pioneered when it was launched 19 years ago.",
+				35, 2, 1);
+		Product game2 = new Game(2, "Knight Online", 
+				"Knight Online is a leading party based medieval MMORPG that is, and will alyways be, Free to Play! Register now and enjoy Knight Online.", 
+				0, 3, 2);
 		productService.addBulk(new Product[] {game1, game2});	
 		System.out.println("");
 		
@@ -50,14 +54,15 @@ public class Main {
 		
 		// Campaign
 		CampaignService campaignService = new CampaignManager();
-		Campaign campaign1 = new Campaign(1, "CSGOX05", game1, "summer campaign", "", 50, new GregorianCalendar(2021,4,1).getTime(), new GregorianCalendar(2021,5,1).getTime()) ;
+		Campaign campaign1 = new Campaign(1, "CSGOX05", game1, "summer campaign", "", 50, 
+				new GregorianCalendar(2021,4,1).getTime(), 
+				new GregorianCalendar(2021,5,1).getTime()) ;
 		campaignService.add(campaign1);
 		System.out.println("");
 
 		// Order
-		OrderService orderService = new OrderManager();
-		Order order1 = new Order(1, new Date(), (Player)player1 , game1, campaign1);
-		orderService.add(order1);
+		OrderService orderService = new OrderManager(userService1,productService,campaignService);
+		orderService.add(new Date(),1,1,1,1,35);
 		System.out.println("");
 	}
 

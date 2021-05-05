@@ -1,5 +1,7 @@
 package homework3.Abstract;
 
+import java.util.ArrayList;
+
 import homework3.Entity.User;
 
 public abstract class BaseUserManager implements UserService {
@@ -26,6 +28,12 @@ public abstract class BaseUserManager implements UserService {
 	public void delete(User user) {
 		System.out.println(user.getId() + " : silinmiştir.");		
 		
+	}
+	
+	@Override
+	public ArrayList<User> getAll() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

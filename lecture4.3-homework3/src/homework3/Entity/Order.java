@@ -5,57 +5,82 @@ import java.util.Date;
 public class Order {
 	private int id;
 	private Date date;
-	private Player player;
-	private Product product;
-	private Campaign campaign;
+	private int userId;
+	private int productId;
+	private int campaignId;
+	private int quantity;
+	private double unitPrice;
+	private double discountPercent;
+	private double discountedPrice;
 	
-	public Order(int id, Date date, Player player, Product product, Campaign campaign) {
+	public Order(int id, Date date, int userId, int productId, int campaignId, int quantity, double unitPrice,
+			double discountPercent, double discountedPrice) {
 		this.id = id;
 		this.date = date;
-		this.player = player;
-		this.product = product;
-		this.campaign = campaign;
+		this.userId = userId;
+		this.productId = productId;
+		this.campaignId = campaignId;
+		this.quantity = quantity;
+		this.unitPrice = unitPrice;
+		this.discountPercent = discountPercent;
+		this.discountedPrice = discountedPrice;
 	}
-
+	
 	public int getId() {
 		return id;
 	}
-
 	public void setId(int id) {
 		this.id = id;
 	}
-
 	public Date getDate() {
 		return date;
 	}
-
 	public void setDate(Date date) {
 		this.date = date;
 	}
-
-	public Player getPlayer() {
-		return player;
+	public int getUserId() {
+		return userId;
 	}
-
-	public void setPlayer(Player player) {
-		this.player = player;
+	public void setUserId(int userId) {
+		this.userId = userId;
 	}
-
-	public Product getProduct() {
-		return product;
+	public int getProductId() {
+		return productId;
 	}
-
-	public void setProduct(Product product) {
-		this.product = product;
+	public void setProductId(int productId) {
+		this.productId = productId;
 	}
-
-	public Campaign getCampaign() {
-		return campaign;
+	public int getCampaignId() {
+		return campaignId;
 	}
-
-	public void setCampaign(Campaign campaign) {
-		this.campaign = campaign;
+	public void setCampaignId(int campaignId) {
+		this.campaignId = campaignId;
 	}
+	public int getQuantity() {
+		return quantity;
+	}
+	public void setQuantity(int quantity) {
+		this.quantity = quantity;
+	}
+	public double getUnitPrice() {
+		return unitPrice;
+	}
+	public void setUnitPrice(double unitPrice) {
+		this.unitPrice = unitPrice;
+	}
+	public double getDiscountPercent() {
+		return discountPercent;
+	}
+	public void setDiscountPercent(double discountPercent) {
+		this.discountPercent = discountPercent;
+	}
+	public double getDiscountedPrice() {
+		return discountedPrice;
+	}
+	public void setDiscountedPrice(double discountedPrice) {
+		this.discountedPrice = discountedPrice;
+	}
+	
 	
 	
 }

@@ -1,5 +1,7 @@
 package homework3.Concrete;
 
+import java.util.ArrayList;
+
 import homework3.Abstract.CategoryService;
 import homework3.Entity.Category;
 
@@ -28,6 +30,12 @@ public class CategoryManager implements CategoryService {
 	public void delete(Category category) {
 		System.out.println(category.getName() + " : silinmiştir.");
 		
+	}
+
+	@Override
+	public ArrayList<Category> getAll() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }
