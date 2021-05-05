@@ -15,3 +15,4 @@
 	 - [*homework2*](https://github.com/karcan/javaBootcamp/tree/master/lecture4.2-homework2/src)
 	 - [*homework3*](https://github.com/karcan/javaBootcamp/tree/master/lecture4.3-homework3/src/homework3)
  - **Lecture 5**
+ 	 - [*nLayeredDemo*](https://github.com/karcan/javaBootcamp/tree/master/lecture5-nLayeredDemo/src/nLayeredDemo)
