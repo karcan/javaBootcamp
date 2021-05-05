@@ -38,7 +38,7 @@ public class OrderManager implements OrderService {
 				+ "|" + order.getDiscountPercent()
 				+ "|" + order.getDiscountedPrice()
 				);
-
+		
 		
 	}
 
