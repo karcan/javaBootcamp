@@ -1,8 +1,6 @@
 ### Java & React Bootcamp (https://kodlama.io/)
 Lectures and Homeworks.
 
-* * *
-
 ## Lectures
  - **Lecture 1**
 	 - [*intro*](https://github.com/karcan/javaBootcamp/tree/master/lecture1-intro/src/intro)
