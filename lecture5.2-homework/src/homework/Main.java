@@ -6,7 +6,6 @@ import homework.business.abstracts.UserCheckService;
 import homework.business.abstracts.UserService;
 import homework.business.abstracts.UserValidationService;
 import homework.business.concretes.AuthManager;
-import homework.business.concretes.DefaultSignUpManager;
 import homework.business.concretes.UserActivationManager;
 import homework.business.concretes.UserCheckManager;
 import homework.business.concretes.UserManager;
