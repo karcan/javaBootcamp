@@ -3,7 +3,7 @@ package homework.business.concretes;
 import java.util.regex.Pattern;
 
 import homework.business.abstracts.UserValidationService;
-import homework.core.utils.ValidationServiceUtils;
+import homework.core.utils.ServiceUtils;
 import homework.core.utils.consts.ValidationMessage;
 import homework.core.utils.result.ErrorResult;
 import homework.core.utils.result.Result;
@@ -18,7 +18,7 @@ public class UserValidationManager implements UserValidationService {
 
 	@Override
 	public void validate(User user) throws Exception {
-		Result[] results = ValidationServiceUtils.runValidates(this.checkFirstNameNotNull(user.getFirstName()),
+		Result[] results = ServiceUtils.runValidates(this.checkFirstNameNotNull(user.getFirstName()),
 				this.checkLastNameNotNull(user.getLastName()), this.checkEmailNotNull(user.getEmail()),
 				this.checkPasswordNotNull(user.getPassword()), this.checkPasswordMinLength(user.getPassword()),
 				this.checkEmailIsValid(user.getEmail()), this.checkFirstNameMinLength(user.getFirstName()),

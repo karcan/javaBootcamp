@@ -8,6 +8,7 @@ public class User implements Entity{
 	private String lastName;
 	private String email;
 	private String password;
+	private boolean isActive;
 	
 	public User() {
 	}
@@ -50,11 +51,19 @@ public class User implements Entity{
 	public void setPassword(String password) {
 		this.password = password;
 	}
+	
+	public boolean isActive() {
+		return isActive;
+	}
+
+	public void setActive(boolean isActive) {
+		this.isActive = isActive;
+	}
 
 	@Override
 	public String toString() {
 		return "{\"id\": " + id + ", \"firstName\": \"" + firstName + "\", \"lastName\": \"" + lastName + "\", \"email\": \"" + email
-				+ "\", \"password\": \"" + password + "\"}";
+				+ "\", \"password\": \"" + password + "\", isActive: " + isActive + "}";
 	}
 	
 	

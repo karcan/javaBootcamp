@@ -5,7 +5,7 @@ import java.util.List;
 
 import homework.core.utils.result.Result;
 
-public class ValidationServiceUtils {
+public class ServiceUtils {
 	public static Result[] runValidates(Result... results) {
 		List<Result> resultList = new ArrayList<Result>();
 		for (Result result : results) {
@@ -14,5 +14,9 @@ public class ValidationServiceUtils {
 			}
 		}
 		return resultList.toArray(new Result[resultList.size()]);
+	}
+	
+	public static Result[] runChecks(Result... results) {
+		return runValidates(results);
 	}
 }

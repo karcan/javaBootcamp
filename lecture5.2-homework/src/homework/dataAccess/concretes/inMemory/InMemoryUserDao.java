@@ -38,7 +38,7 @@ public class InMemoryUserDao implements UserDao {
 
 	@Override
 	public User get(Predicate<User> predicate) {
-		return this.userArrayList.stream().filter(predicate).findFirst().get();
+		return this.userArrayList.stream().filter(predicate).findFirst().orElse(null);
 	}
 
 	@Override
