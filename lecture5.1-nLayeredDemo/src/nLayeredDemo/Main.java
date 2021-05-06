@@ -1,8 +1,8 @@
 package nLayeredDemo;
 
 import nLayeredDemo.business.abstracts.ProductService;
-import nLayeredDemo.business.concretes.JLoggerManagerAdapter;
 import nLayeredDemo.business.concretes.ProductManager;
+import nLayeredDemo.core.JLoggerManagerAdapter;
 import nLayeredDemo.dataAccess.concretes.AbcProductDao;
 import nLayeredDemo.entities.concretes.Product;
 

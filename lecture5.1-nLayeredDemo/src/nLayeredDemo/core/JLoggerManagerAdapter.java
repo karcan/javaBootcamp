@@ -1,6 +1,5 @@
-package nLayeredDemo.business.concretes;
+package nLayeredDemo.core;
 
-import nLayeredDemo.core.LoggerService;
 import nLayeredDemo.jLogger.JLoggerManager;
 
 public class JLoggerManagerAdapter implements LoggerService{
