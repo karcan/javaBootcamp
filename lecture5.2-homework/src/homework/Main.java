@@ -1,15 +1,19 @@
 package homework;
 
+import homework.business.abstracts.AuthService;
 import homework.business.abstracts.UserActivationService;
 import homework.business.abstracts.UserCheckService;
 import homework.business.abstracts.UserService;
 import homework.business.abstracts.UserValidationService;
+import homework.business.concretes.AuthManager;
+import homework.business.concretes.DefaultSignUpManager;
 import homework.business.concretes.UserActivationManager;
 import homework.business.concretes.UserCheckManager;
 import homework.business.concretes.UserManager;
 import homework.business.concretes.UserValidationManager;
 import homework.core.utils.mail.CustomMailManager;
 import homework.core.utils.mail.MailService;
+import homework.core.utils.security.signUp.googleSignUp.GoogleSignUpManagerAdapter;
 import homework.dataAccess.abstracts.UserActivationDao;
 import homework.dataAccess.abstracts.UserDao;
 import homework.dataAccess.concretes.inMemory.InMemoryUserActivationDao;
@@ -29,6 +33,7 @@ public class Main {
 		UserActivationService userActivationService = new UserActivationManager(userDao, userActivationDao, mailService);
 		
 		UserService userService = new UserManager(userDao, userValidationService, userCheckService, userActivationService);
+		
 		User user = new User
 				(1,
 				"Karcan",
@@ -37,11 +42,12 @@ public class Main {
 				"123456"
 				);
 		
-		userService.add(user);
-		
+		AuthService authService = new AuthManager(userDao, new GoogleSignUpManagerAdapter(userService));
+		authService.register(user);
 		
 		userActivationService.check("2e315ebc-a2e1-48db-b250-cf560a845e22");
-		System.out.println("User check after using activation code : " + user);
+
+		authService.login("karcanozbal@outlook.com.tr", "123456");
 
 	}
 

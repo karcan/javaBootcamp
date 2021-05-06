@@ -12,5 +12,9 @@ public class ValidationMessage {
 	public static String emailAlreadyExists = "E-mail already exists.";
 	
 	public static String userActivated = "user is activated, now you can login."; 
-	public static String activationCodeNotFound = "Activation Code not found."; 
+	public static String activationCodeNotFound = "Activation Code not found.";
+	public static String googleSignUpSuccessful = "Google Sign-Up authentication Successful"; 
+	public static String googleSignUpFailed = "Google Sign-Up authentication Failed";
+	public static String userLoggedIn = "User logged in.";
+	public static String userEmailOrPasswordNotFound = "Email or Password not found."; 
 }

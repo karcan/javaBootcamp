@@ -26,18 +26,23 @@ public class UserManager implements UserService {
 	
 	@Override
 	public void add(User user) {
-		
+		boolean thrown = false;
 		try {
 			this.userValidationService.validate(user);
 			this.userCheckService.check(user);
+			
+			
 		} catch (Exception e) {
+			thrown = true;
 			e.printStackTrace();
-			return;
-		}
-		
-		this.userDao.add(user);
-		System.out.println("User created : " + user.toString());
-		this.userActivationService.add(user);
+		} finally {
+
+			if(!thrown) {
+				this.userDao.add(user);
+				System.out.println("User created : " + user.toString());
+				this.userActivationService.add(user);
+			}	
+		}	
 	}
 
 	@Override

@@ -34,7 +34,7 @@ public class UserActivationManager implements UserActivationService {
 
 	@Override
 	public void check(String activationCode) {
-		UserActivation userActivation = this.userActivationDao.get(a -> a.getActivationCode() == activationCode);
+		UserActivation userActivation = this.userActivationDao.get(u -> u.getActivationCode() == activationCode);
 		if(userActivation != null) {
 			int userId = userActivation.getUserId();
 			User user = this.userDao.get(u -> u.getId() == userId);
