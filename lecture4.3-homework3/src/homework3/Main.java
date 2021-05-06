@@ -63,6 +63,13 @@ public class Main {
 		OrderService orderService = new OrderManager(userService1,productService,campaignService);
 		orderService.add(new Date(),1,1,1,1,35);
 		System.out.println("");
+		
+		
+		
+		PlayerManager playerManager = new PlayerManager(new PlayerCheckManager(new MernisServiceAdapter()));
+		playerManager.get(u -> u.getUserCode() == "111").forEach(user->{
+			System.out.println(user.getUserCode());
+		});
 	}
 
 }

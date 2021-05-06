@@ -1,4 +1,6 @@
-package homework.core;
+package homework.core.utils.security.signIn.googleSignIn;
+
+import homework.core.utils.security.signIn.SignInService;
 
 public class GoogleSignInManagerAdapter implements SignInService {
 
