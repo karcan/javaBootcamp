@@ -2,10 +2,15 @@ package homework.business.concretes;
 
 import java.util.UUID;
 
+
 import homework.business.abstracts.UserActivationService;
-import homework.business.consts.Environment;
 import homework.core.utils.consts.ValidationMessage;
-import homework.core.utils.mail.MailService;
+import homework.core.utils.sendable.Sendable;
+import homework.core.utils.sendable.SendableUtils;
+import homework.core.utils.sendable.mail.Mail;
+import homework.core.utils.sendable.mail.MailService;
+import homework.core.utils.sendable.sms.Sms;
+import homework.core.utils.sendable.sms.SmsService;
 import homework.dataAccess.abstracts.UserActivationDao;
 import homework.dataAccess.abstracts.UserDao;
 import homework.entity.concretes.User;
@@ -15,11 +20,11 @@ public class UserActivationManager implements UserActivationService {
 	
 	private UserDao userDao;
 	private UserActivationDao userActivationDao;
-	private MailService mailService;
+	private Sendable[] sendables;
 	
-	public UserActivationManager(UserDao userDao, UserActivationDao userActivationDao , MailService mailService) {
+	public UserActivationManager(UserDao userDao, UserActivationDao userActivationDao , Sendable[] sendables) {
 		this.userDao = userDao;
-		this.mailService = mailService;
+		this.sendables = sendables;
 		this.userActivationDao = userActivationDao;
 	}
 
@@ -29,7 +34,8 @@ public class UserActivationManager implements UserActivationService {
 		String activationCode = uuid.toString();
 		
 		this.userActivationDao.add(new UserActivation(1, user.getId(), activationCode));
-		this.mailService.sendMail(user.getEmail(), Environment.url + Environment.activationPath + activationCode);
+		
+		this.runSandables(user, activationCode);
 	}
 
 	@Override
@@ -46,5 +52,18 @@ public class UserActivationManager implements UserActivationService {
 		}
 		
 	}
+	
+	private void runSandables(User user, String message) {
+		for (Sendable sendable : sendables) {
+			if(sendable.getClass().getAnnotatedInterfaces()[0].getType() == MailService.class) {
+				Mail mail = new Mail(user.getEmail(), message);
+				SendableUtils.run(sendable,mail);
+			}else if(sendable.getClass().getAnnotatedInterfaces()[0].getType() == SmsService.class) {
+				Sms sms = new Sms(user.getPhoneNumber(), message);
+				SendableUtils.run(sendable, sms);
+			}
+		}
+	}
+	
 
 }

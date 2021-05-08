@@ -1,10 +1,10 @@
-package homework.core.utils.security.signUp.googleSignUp;
+package homework.business.adapters;
 
 import homework.business.abstracts.BaseSignUpManager;
 import homework.business.abstracts.UserService;
 import homework.core.utils.consts.ValidationMessage;
 import homework.entity.concretes.User;
-import homework.googleSignUp.GoogleSignUpManager;
+import homework.googleAuth.GoogleSignUpManager;
 
 public class GoogleSignUpManagerAdapter extends BaseSignUpManager {
 

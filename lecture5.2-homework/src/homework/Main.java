@@ -5,14 +5,17 @@ import homework.business.abstracts.UserActivationService;
 import homework.business.abstracts.UserCheckService;
 import homework.business.abstracts.UserService;
 import homework.business.abstracts.UserValidationService;
+import homework.business.adapters.GoogleSignUpManagerAdapter;
 import homework.business.concretes.AuthManager;
 import homework.business.concretes.UserActivationManager;
 import homework.business.concretes.UserCheckManager;
 import homework.business.concretes.UserManager;
 import homework.business.concretes.UserValidationManager;
-import homework.core.utils.mail.CustomMailManager;
-import homework.core.utils.mail.MailService;
-import homework.core.utils.security.signUp.googleSignUp.GoogleSignUpManagerAdapter;
+import homework.core.utils.sendable.Sendable;
+import homework.core.utils.sendable.mail.CustomMailManager;
+import homework.core.utils.sendable.mail.MailService;
+import homework.core.utils.sendable.sms.CustomSmsManager;
+import homework.core.utils.sendable.sms.SmsService;
 import homework.dataAccess.abstracts.UserActivationDao;
 import homework.dataAccess.abstracts.UserDao;
 import homework.dataAccess.concretes.inMemory.InMemoryUserActivationDao;
@@ -29,7 +32,9 @@ public class Main {
 		
 		UserActivationDao userActivationDao = new InMemoryUserActivationDao();
 		MailService mailService = new CustomMailManager();	
-		UserActivationService userActivationService = new UserActivationManager(userDao, userActivationDao, mailService);
+		SmsService smsService = new CustomSmsManager();
+		Sendable[] sendables = {mailService, smsService};
+		UserActivationService userActivationService = new UserActivationManager(userDao, userActivationDao, sendables);
 		
 		UserService userService = new UserManager(userDao, userValidationService, userCheckService, userActivationService);
 		
@@ -38,7 +43,8 @@ public class Main {
 				"Karcan",
 				"Özbal",
 				"karcanozbal@outlook.com.tr",
-				"123456"
+				"123456",
+				"05321560154"
 				);
 		
 		AuthService authService = new AuthManager(userDao, new GoogleSignUpManagerAdapter(userService));
