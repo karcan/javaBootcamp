@@ -47,7 +47,7 @@ public class Main {
 				"05321560154"
 				);
 		
-		AuthService authService = new AuthManager(userDao, new GoogleSignUpManagerAdapter(userService));
+		AuthService authService = new AuthManager(userService, new GoogleSignUpManagerAdapter(userService));
 		authService.register(user);
 		
 		userActivationService.check("2e315ebc-a2e1-48db-b250-cf560a845e22");

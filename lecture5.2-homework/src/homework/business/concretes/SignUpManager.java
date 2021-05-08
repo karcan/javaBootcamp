@@ -7,7 +7,6 @@ public class SignUpManager extends BaseSignUpManager {
 
 	public SignUpManager(UserService userService) {
 		super(userService);
-		// TODO Auto-generated constructor stub
 	}
 
 }
