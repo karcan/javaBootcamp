@@ -17,12 +17,18 @@ public class UserValidationManager implements UserValidationService {
 	}
 
 	@Override
-	public void validate(User user) throws Exception {
+	public void validateForAdd(User user) throws Exception {
 		Result[] results = ServiceUtils.runValidates(this.checkFirstNameNotNull(user.getFirstName()),
 				this.checkLastNameNotNull(user.getLastName()), this.checkEmailNotNull(user.getEmail()),
 				this.checkPasswordNotNull(user.getPassword()), this.checkPasswordMinLength(user.getPassword()),
 				this.checkEmailIsValid(user.getEmail()), this.checkFirstNameMinLength(user.getFirstName()),
 				this.checkLastNameMinLength(user.getLastName()));
+		
+		this.check(results);
+		
+	}
+	
+	private void check(Result[] results) throws Exception {
 		for (Result result : results) {
 			if (!result.isSuccess()) {
 				throw new Exception(result.getMessage());

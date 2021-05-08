@@ -18,9 +18,12 @@ public class UserCheckManager implements UserCheckService {
 	}
 	
 	@Override
-	public void check(User user) throws Exception {
+	public void checkForAdd(User user) throws Exception{
 		Result[] results = ServiceUtils.runChecks(checkDuplicateEmail(user.getEmail()));
-		
+		this.check(results);
+	}
+	
+	private void check(Result[] results) throws Exception {
 		for (Result result : results) {
 			if (!result.isSuccess()) {
 				throw new Exception(result.getMessage());
@@ -35,5 +38,6 @@ public class UserCheckManager implements UserCheckService {
 		
 		return new SuccessResult();
 	}
+
 	
 }

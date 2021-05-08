@@ -16,5 +16,6 @@ public class ValidationMessage {
 	public static String googleSignUpSuccessful = "Google Sign-Up authentication Successful"; 
 	public static String googleSignUpFailed = "Google Sign-Up authentication Failed";
 	public static String userLoggedIn = "User logged in.";
-	public static String userEmailOrPasswordNotFound = "Email or Password not found."; 
+	public static String userEmailOrPasswordNotFound = "Email or Password not found.";
+	public static String needActivateUser = "You need activate the user."; 
 }

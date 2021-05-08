@@ -1,29 +1,38 @@
 package homework.business.concretes;
 
+import homework.business.abstracts.AuthCheckService;
 import homework.business.abstracts.AuthService;
-import homework.business.abstracts.UserService;
 import homework.core.utils.consts.ValidationMessage;
 import homework.core.utils.security.signUp.SignUpService;
 import homework.entity.concretes.User;
 
 public class AuthManager implements AuthService {
 	
-	private UserService userService;
+	private AuthCheckService authCheckService;
 	private SignUpService signUpService;
 	
-	public AuthManager(UserService userService, SignUpService signUpService) {
-		this.userService = userService;
+	public AuthManager(AuthCheckService authCheckService, SignUpService signUpService) {
+		this.authCheckService = authCheckService;
 		this.signUpService = signUpService;
 	}
 
 	@Override
 	public void login(String email, String password) {
+		boolean thrown = false;
+		try {
+			this.authCheckService.checkForRegister(email,password);
+		} catch (Exception e) {
+			thrown = true;
+			e.printStackTrace();
+		} finally {
 
-		if(this.userService.get(u -> u.getEmail() == email && u.getPassword() == password) != null) {
-			System.out.println(ValidationMessage.userLoggedIn);
-		}else {
-			System.out.println(ValidationMessage.userEmailOrPasswordNotFound);
-		}
+			if(!thrown) {
+				System.out.println(ValidationMessage.userEmailOrPasswordNotFound);
+			}	
+		}	
+		
+	
+		
 	}
 
 	@Override

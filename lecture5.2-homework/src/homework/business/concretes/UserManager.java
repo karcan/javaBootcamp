@@ -28,8 +28,8 @@ public class UserManager implements UserService {
 	public void add(User user) {
 		boolean thrown = false;
 		try {
-			this.userValidationService.validate(user);
-			this.userCheckService.check(user);
+			this.userValidationService.validateForAdd(user);
+			this.userCheckService.checkForAdd(user);
 			
 			
 		} catch (Exception e) {
@@ -48,7 +48,7 @@ public class UserManager implements UserService {
 	@Override
 	public void update(User user) {
 		try {
-			this.userValidationService.validate(user);
+			this.userValidationService.validateForAdd(user);
 		} catch (Exception e) {
 			e.printStackTrace();
 			return;
