@@ -16,3 +16,4 @@
 	 - [*homework3*](https://github.com/karcan/javaBootcamp/tree/master/lecture4.3-homework3/src/homework3)
  - **Lecture 5**
  	 - [*nLayeredDemo*](https://github.com/karcan/javaBootcamp/tree/master/lecture5-nLayeredDemo/src/nLayeredDemo)
+ 	 - [*homework*](https://github.com/karcan/javaBootcamp/tree/master/lecture5.2-homework/src/homework)
