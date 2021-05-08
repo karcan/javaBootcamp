@@ -15,13 +15,11 @@ public class UserManager implements UserService {
 	private UserDao userDao;
 	private UserValidationService userValidationService;
 	private UserCheckService userCheckService;
-	private UserActivationService userActivationService;
 	
 	public UserManager(UserDao userDao, UserValidationService userValidationService, UserCheckService userCheckService, UserActivationService userActivationService) {
 		this.userDao = userDao;
 		this.userValidationService = userValidationService;
-		this.userCheckService = userCheckService;
-		this.userActivationService = userActivationService;
+		this.userCheckService = userCheckService;	
 	}
 	
 	@Override
@@ -40,7 +38,6 @@ public class UserManager implements UserService {
 			if(!thrown) {
 				this.userDao.add(user);
 				System.out.println("User created : " + user.toString());
-				this.userActivationService.add(user);
 			}	
 		}	
 	}
