@@ -16,7 +16,7 @@ public class UserManager implements UserService {
 	private UserValidationService userValidationService;
 	private UserCheckService userCheckService;
 	
-	public UserManager(UserDao userDao, UserValidationService userValidationService, UserCheckService userCheckService, UserActivationService userActivationService) {
+	public UserManager(UserDao userDao, UserValidationService userValidationService, UserCheckService userCheckService) {
 		this.userDao = userDao;
 		this.userValidationService = userValidationService;
 		this.userCheckService = userCheckService;	

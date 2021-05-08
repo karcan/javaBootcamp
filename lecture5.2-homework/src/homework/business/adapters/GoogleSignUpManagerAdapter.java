@@ -7,6 +7,8 @@ import homework.entity.concretes.User;
 import homework.googleAuth.GoogleSignUpManager;
 
 public class GoogleSignUpManagerAdapter extends BaseSignUpManager {
+	
+	
 
 	public GoogleSignUpManagerAdapter(UserService userService) {
 		super(userService);

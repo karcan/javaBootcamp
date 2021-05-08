@@ -31,21 +31,19 @@ public class Main {
 		UserDao userDao = new InMemoryUserDao();
 		UserValidationService userValidationService = new UserValidationManager();
 		UserCheckService userCheckService = new UserCheckManager(userDao);
-
+		UserService userService = new UserManager(userDao, userValidationService, userCheckService);
+		
 		UserActivationDao userActivationDao = new InMemoryUserActivationDao();
 		MailService mailService = new CustomMailManager();
 		SmsService smsService = new CustomSmsManager();
 		Sendable[] sendables = { mailService, smsService };
-		UserActivationService userActivationService = new UserActivationManager(userDao, userActivationDao, sendables);
-
-		UserService userService = new UserManager(userDao, userValidationService, userCheckService,
-				userActivationService);
+		UserActivationService userActivationService = new UserActivationManager(userService, userActivationDao, sendables);
 
 		User user = new User(1, "Karcan", "Özbal", "karcanozbal@outlook.com.tr", "123456", "05321560154");
 		
 		AuthCheckService authCheckService = new AuthCheckManager(userService);
 		
-		AuthService authService = new AuthManager(authCheckService, new GoogleSignUpManagerAdapter(userService));
+		AuthService authService = new AuthManager(authCheckService, new GoogleSignUpManagerAdapter(userService), userActivationService);
 		authService.register(user);
 
 		userActivationService.check("2e315ebc-a2e1-48db-b250-cf560a845e22");

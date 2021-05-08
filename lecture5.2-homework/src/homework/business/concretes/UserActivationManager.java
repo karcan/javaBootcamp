@@ -4,6 +4,7 @@ import java.util.UUID;
 
 
 import homework.business.abstracts.UserActivationService;
+import homework.business.abstracts.UserService;
 import homework.core.utils.consts.ValidationMessage;
 import homework.core.utils.sendable.Sendable;
 import homework.core.utils.sendable.SendableUtils;
@@ -12,18 +13,17 @@ import homework.core.utils.sendable.mail.MailService;
 import homework.core.utils.sendable.sms.Sms;
 import homework.core.utils.sendable.sms.SmsService;
 import homework.dataAccess.abstracts.UserActivationDao;
-import homework.dataAccess.abstracts.UserDao;
 import homework.entity.concretes.User;
 import homework.entity.concretes.UserActivation;
 
 public class UserActivationManager implements UserActivationService {
 	
-	private UserDao userDao;
+	private UserService userService;
 	private UserActivationDao userActivationDao;
 	private Sendable[] sendables;
 	
-	public UserActivationManager(UserDao userDao, UserActivationDao userActivationDao , Sendable[] sendables) {
-		this.userDao = userDao;
+	public UserActivationManager(UserService userService, UserActivationDao userActivationDao , Sendable[] sendables) {
+		this.userService = userService;
 		this.sendables = sendables;
 		this.userActivationDao = userActivationDao;
 	}
@@ -43,9 +43,9 @@ public class UserActivationManager implements UserActivationService {
 		UserActivation userActivation = this.userActivationDao.get(u -> u.getActivationCode() == activationCode);
 		if(userActivation != null) {
 			int userId = userActivation.getUserId();
-			User user = this.userDao.get(u -> u.getId() == userId);
+			User user = this.userService.get(u -> u.getId() == userId);
 			user.setActive(true);
-			this.userDao.update(user);
+			this.userService.update(user);
 			System.out.println(ValidationMessage.userActivated);
 		}else {
 			System.out.println(ValidationMessage.activationCodeNotFound);
