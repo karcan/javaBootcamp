@@ -19,7 +19,7 @@ public class UserCheckManager implements UserCheckService {
 	
 	@Override
 	public void check(User user) throws Exception {
-		Result[] results = ServiceUtils.runChecks(this.checkDuplicateEmail(user.getEmail()));
+		Result[] results = ServiceUtils.runChecks(checkDuplicateEmail(user.getEmail()));
 		
 		for (Result result : results) {
 			if (!result.isSuccess()) {
