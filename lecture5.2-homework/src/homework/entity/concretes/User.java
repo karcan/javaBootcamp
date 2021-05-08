@@ -14,12 +14,8 @@ public class User implements Entity{
 	public User() {
 	}
 	
-<<<<<<< HEAD
+
 	public User(int id, String firstName, String lastName, String email, String password, String phoneNumber) {
-		super();
-=======
-	public User(int id, String firstName, String lastName, String email, String password) {
->>>>>>> b7004b6d0af0929e7a4c5d00cf75a462bc814ee3
 		this.id = id;
 		this.firstName = firstName;
 		this.lastName = lastName;
