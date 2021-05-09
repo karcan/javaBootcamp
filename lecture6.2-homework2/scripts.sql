@@ -1,9 +1,9 @@
 DROP TABLE IF EXISTS company_activation_codes;
 DROP TABLE IF EXISTS company_activation_employees;
-DROP TABLE IF EXISTS users;
 DROP TABLE IF EXISTS companies;
 DROP TABLE IF EXISTS employees;
 DROP TABLE IF EXISTS candidates;
+DROP TABLE IF EXISTS users;
 DROP TABLE IF EXISTS job_titles;
 
 CREATE TABLE "public"."candidates"( 
@@ -46,12 +46,12 @@ CREATE TABLE "public"."users"(
 	"id" int NOT NULL,
 	"email" varchar(50) NOT NULL,
 	"password" varchar(25) NOT NULL);
-	
+
+
 CREATE SEQUENCE "public"."company_activation_codes_id_seq" INCREMENT BY 1 START WITH 1 OWNED BY "public"."company_activation_codes"."id";
 CREATE SEQUENCE "public"."company_activation_employees_id_seq" INCREMENT BY 1 START WITH 1 OWNED BY "public"."company_activation_employees"."id";
 CREATE SEQUENCE "public"."job_titles_id_seq" INCREMENT BY 1 START WITH 1 OWNED BY "public"."job_titles"."id";
 CREATE SEQUENCE "public"."users_id_seq" INCREMENT BY 1 START WITH 1 OWNED BY "public"."users"."id";
-ALTER TABLE "public"."admins" ADD CONSTRAINT "pk_admin" PRIMARY KEY ("id");
 ALTER TABLE "public"."candidates" ADD CONSTRAINT "pk_candidate" PRIMARY KEY ("user_id");
 ALTER TABLE "public"."companies" ADD CONSTRAINT "pk_company" PRIMARY KEY ("user_id");
 ALTER TABLE "public"."company_activation_codes" ADD CONSTRAINT "pk_companyactivationcode" PRIMARY KEY ("id");
