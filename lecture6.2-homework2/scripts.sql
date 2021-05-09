@@ -23,7 +23,8 @@ CREATE TABLE "public"."companies"(
 	"id" int NOT NULL,
 	"company_name" varchar(255) NOT NULL,
 	"web_address" varchar(50) NOT NULL,
-	"phone_number" varchar(12) NOT NULL);
+	"phone_number" varchar(12) NOT NULL,
+	"is_active" boolean NOT NULL);
 
 CREATE TABLE "public"."company_activation_codes"( 
 	"id" int NOT NULL,
@@ -66,3 +67,4 @@ ALTER TABLE "public"."company_activation_employees" ADD CONSTRAINT "fk_companyac
 ALTER TABLE "public"."users" ADD CONSTRAINT "fk_user_candidate" FOREIGN KEY ("id") REFERENCES "public"."candidates" ( "id");
 ALTER TABLE "public"."users" ADD CONSTRAINT "fk_user_company" FOREIGN KEY ("id") REFERENCES "public"."companies" ( "id");
 ALTER TABLE "public"."users" ADD CONSTRAINT "fk_user_employee" FOREIGN KEY ("id") REFERENCES "public"."employees" ( "id");
+ALTER TABLE "public"."companies" ALTER COLUMN "is_active" SET DEFAULT false;
