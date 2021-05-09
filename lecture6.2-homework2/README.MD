@@ -11,5 +11,5 @@
 - <b>job_titles</b> <i>(iş pozisoynları için ünvanlar.)</i>
 
 ## ER Şeması
-<img src="ER Diagram.2.png">
+<img src="ER Diagram.3.png">
  
