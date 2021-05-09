@@ -6,7 +6,7 @@
   - <b>candidates</b> <i>(iş arayanlar)</i>
   - <b>employers</b> <i>(iş verenler)</i>
     - <b>employer_activation_codes</b> <i>(aktivasyon kodu ile onaylamak için)</i>
-    - <b>employer_activation_emloyees</b> <i>(aktivasyon kodu onayından sonra, sistem çalışanı tarafından onaylamak için)</i>
+    - <b>employer_activation_emloyees</b> <i>(sistem çalışanı tarafından onaylamak için)</i>
   - <b>employees</b> <i>(sistem çalışanları)</i>
 - <b>job_titles</b> <i>(iş pozisoynları için ünvanlar.)</i>
 
