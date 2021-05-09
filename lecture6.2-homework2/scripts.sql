@@ -8,7 +8,7 @@ DROP TABLE IF EXISTS job_titles;
 DROP TABLE IF EXISTS admins;
 
 CREATE TABLE "public"."admins"( 
-	"id" int NOT NULL,
+	"id" int NOT NULL GENERATED ALWAYS AS IDENTITY ( INCREMENT 1 START 1 MINVALUE 1 MAXVALUE 2147483647 CACHE 1 ),
 	"username" varchar(25),
 	"password" varchar(25));
 
@@ -27,14 +27,14 @@ CREATE TABLE "public"."companies"(
 	"is_active" boolean NOT NULL);
 
 CREATE TABLE "public"."company_activation_codes"( 
-	"id" int NOT NULL,
+	"id" int NOT NULL GENERATED ALWAYS AS IDENTITY ( INCREMENT 1 START 1 MINVALUE 1 MAXVALUE 2147483647 CACHE 1 ),
 	"company_id" int NOT NULL,
 	"activation_code" varchar(38) NOT NULL,
 	"is_confirmed" boolean NOT NULL,
 	"confirmed_date" date);
 
 CREATE TABLE "public"."company_activation_employees"( 
-	"id" int NOT NULL,
+	"id" int NOT NULL GENERATED ALWAYS AS IDENTITY ( INCREMENT 1 START 1 MINVALUE 1 MAXVALUE 2147483647 CACHE 1 ),
 	"company_id" int NOT NULL,
 	"confirmed_employee_id" int,
 	"confirmed_date" date);
@@ -45,11 +45,11 @@ CREATE TABLE "public"."employees"(
 	"last_name" varchar(25) NOT NULL);
 
 CREATE TABLE "public"."job_titles"( 
-	"id" int NOT NULL,
+	"id" int NOT NULL GENERATED ALWAYS AS IDENTITY ( INCREMENT 1 START 1 MINVALUE 1 MAXVALUE 2147483647 CACHE 1 ),
 	"title" varchar(50) NOT NULL);
 
 CREATE TABLE "public"."users"( 
-	"id" int NOT NULL,
+	"id" int NOT NULL GENERATED ALWAYS AS IDENTITY ( INCREMENT 1 START 1 MINVALUE 1 MAXVALUE 2147483647 CACHE 1 ),
 	"email" varchar(50) NOT NULL,
 	"password" varchar(25) NOT NULL);
 	
