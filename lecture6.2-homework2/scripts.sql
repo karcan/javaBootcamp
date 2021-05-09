@@ -55,6 +55,7 @@ CREATE TABLE "public"."users"(
 	
 ALTER TABLE "public"."admins" ADD CONSTRAINT "pk_admin" PRIMARY KEY ("id");
 ALTER TABLE "public"."candidates" ADD CONSTRAINT "pk_candidate" PRIMARY KEY ("user_id");
+ALTER TABLE "public"."candidates" ADD CONSTRAINT "uc_identity_numbers" UNIQUE ("identity_number");
 ALTER TABLE "public"."companies" ADD CONSTRAINT "pk_company" PRIMARY KEY ("user_id");
 ALTER TABLE "public"."company_activation_codes" ADD CONSTRAINT "pk_companyactivationcode" PRIMARY KEY ("id");
 ALTER TABLE "public"."company_activation_employees" ADD CONSTRAINT "pk_companyactivationemployee" PRIMARY KEY ("id");
