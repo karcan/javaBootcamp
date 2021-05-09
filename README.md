@@ -17,3 +17,6 @@
  - **Lecture 5**
  	 - [*nLayeredDemo*](https://github.com/karcan/javaBootcamp/tree/master/lecture5-nLayeredDemo/src/nLayeredDemo)
  	 - [*homework*](https://github.com/karcan/javaBootcamp/tree/master/lecture5.2-homework/src/homework)
+ - **Lecture 6**
+ 	 - [*springIntro*](https://github.com/karcan/javaBootcamp/tree/master/lecture6.1-springIntro/src/main/java/kodlamaio/northwind)
+ 	 - [*homework2*](https://github.com/karcan/javaBootcamp/tree/master/lecture6.2-homework2)
