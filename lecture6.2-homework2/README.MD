@@ -1,3 +1,6 @@
+## Script Kodları
+<a href="scripts.sql">Tıkla :)</a>
+
 ## ER Açıklaması 
 - <b>admins</b>
 - <b>users</b> <i>(3 farklı kullanıcı tipini barındıracağımız ana tablomuz.)</i>
