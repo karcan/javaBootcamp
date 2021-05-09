@@ -13,14 +13,14 @@ CREATE TABLE "public"."admins"(
 	"password" varchar(25));
 
 CREATE TABLE "public"."candidates"( 
-	"id" int NOT NULL,
+	"user_id" int NOT NULL,
 	"first_name" varchar(25) NOT NULL,
 	"last_name" varchar(25) NOT NULL,
 	"identity_number" varchar(11) NOT NULL,
 	"birth_date" date NOT NULL);
 
 CREATE TABLE "public"."companies"( 
-	"id" int NOT NULL,
+	"user_id" int NOT NULL,
 	"company_name" varchar(255) NOT NULL,
 	"web_address" varchar(50) NOT NULL,
 	"phone_number" varchar(12) NOT NULL,
@@ -40,7 +40,7 @@ CREATE TABLE "public"."company_activation_employees"(
 	"confirmed_date" date);
 
 CREATE TABLE "public"."employees"( 
-	"id" int NOT NULL,
+	"user_id" int NOT NULL,
 	"first_name" varchar(25) NOT NULL,
 	"last_name" varchar(25) NOT NULL);
 
@@ -54,17 +54,17 @@ CREATE TABLE "public"."users"(
 	"password" varchar(25) NOT NULL);
 	
 ALTER TABLE "public"."admins" ADD CONSTRAINT "pk_admin" PRIMARY KEY ("id");
-ALTER TABLE "public"."candidates" ADD CONSTRAINT "pk_candidate" PRIMARY KEY ("id");
-ALTER TABLE "public"."companies" ADD CONSTRAINT "pk_company" PRIMARY KEY ("id");
+ALTER TABLE "public"."candidates" ADD CONSTRAINT "pk_candidate" PRIMARY KEY ("user_id");
+ALTER TABLE "public"."companies" ADD CONSTRAINT "pk_company" PRIMARY KEY ("user_id");
 ALTER TABLE "public"."company_activation_codes" ADD CONSTRAINT "pk_companyactivationcode" PRIMARY KEY ("id");
 ALTER TABLE "public"."company_activation_employees" ADD CONSTRAINT "pk_companyactivationemployee" PRIMARY KEY ("id");
-ALTER TABLE "public"."employees" ADD CONSTRAINT "pk_employee" PRIMARY KEY ("id");
+ALTER TABLE "public"."employees" ADD CONSTRAINT "pk_employee" PRIMARY KEY ("user_id");
 ALTER TABLE "public"."job_titles" ADD CONSTRAINT "pk_job_titles" PRIMARY KEY ("id");
 ALTER TABLE "public"."users" ADD CONSTRAINT "pk_user" PRIMARY KEY ("id");
 ALTER TABLE "public"."job_titles" ADD CONSTRAINT "uc_job_titles" UNIQUE ("title");
-ALTER TABLE "public"."company_activation_codes" ADD CONSTRAINT "fk_companyactivationcode_company" FOREIGN KEY ("company_id") REFERENCES "public"."companies" ( "id");
-ALTER TABLE "public"."company_activation_employees" ADD CONSTRAINT "fk_companyactivationemployee_company" FOREIGN KEY ("company_id") REFERENCES "public"."companies" ( "id");
-ALTER TABLE "public"."users" ADD CONSTRAINT "fk_user_candidate" FOREIGN KEY ("id") REFERENCES "public"."candidates" ( "id");
-ALTER TABLE "public"."users" ADD CONSTRAINT "fk_user_company" FOREIGN KEY ("id") REFERENCES "public"."companies" ( "id");
-ALTER TABLE "public"."users" ADD CONSTRAINT "fk_user_employee" FOREIGN KEY ("id") REFERENCES "public"."employees" ( "id");
+ALTER TABLE "public"."company_activation_codes" ADD CONSTRAINT "fk_companyactivationcode_company" FOREIGN KEY ("company_id") REFERENCES "public"."companies" ( "user_id");
+ALTER TABLE "public"."company_activation_employees" ADD CONSTRAINT "fk_companyactivationemployee_company" FOREIGN KEY ("company_id") REFERENCES "public"."companies" ( "user_id");
+ALTER TABLE "public"."users" ADD CONSTRAINT "fk_user_candidate" FOREIGN KEY ("id") REFERENCES "public"."candidates" ( "user_id");
+ALTER TABLE "public"."users" ADD CONSTRAINT "fk_user_company" FOREIGN KEY ("id") REFERENCES "public"."companies" ( "user_id");
+ALTER TABLE "public"."users" ADD CONSTRAINT "fk_user_employee" FOREIGN KEY ("id") REFERENCES "public"."employees" ( "user_id");
 ALTER TABLE "public"."companies" ALTER COLUMN "is_active" SET DEFAULT false;
