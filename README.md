@@ -20,3 +20,5 @@
  - **Lecture 6**
  	 - [*springIntro*](https://github.com/karcan/javaBootcamp/tree/master/lecture6.1-springIntro/src/main/java/kodlamaio/northwind)
  	 - [*homework2*](https://github.com/karcan/javaBootcamp/tree/master/lecture6.2-homework2)
+ - **Lecture 7**
+ 	 - [*swaggerAndResult*](https://github.com/karcan/javaBootcamp/tree/master/lecture7.1-swaggerAndResult/src/main/java/kodlamaio/northwind)
