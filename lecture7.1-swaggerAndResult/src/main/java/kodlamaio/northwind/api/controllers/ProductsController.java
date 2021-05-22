@@ -25,8 +25,7 @@ public class ProductsController {
 	
 	@GetMapping("/getall")
 	public DataResult<List<Product>> getAll(){
-		List<Product> productList = this.productService.getAll();
-		return new SuccessDataResult<List<Product>>(productList);
+		return this.productService.getAll();
 	}
 
 }
