@@ -1,6 +1,7 @@
 package kodlamaio.northwind.business.concretes;
 
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -34,5 +35,7 @@ public class ProductManager implements ProductService {
 		this.productDao.save(product);
 		return new SuccessResult("Ürün eklendi");
 	}
+
+
 
 }
