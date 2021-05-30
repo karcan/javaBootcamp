@@ -22,3 +22,5 @@
  	 - [*homework2*](https://github.com/karcan/javaBootcamp/tree/master/lecture6.2-homework2)
  - **Lecture 7**
  	 - [*swaggerAndResult*](https://github.com/karcan/javaBootcamp/tree/master/lecture7.1-swaggerAndResult/src/main/java/kodlamaio/northwind)
+ - **Lecture 8**
+ 	 - [*springJPA*](https://github.com/karcan/javaBootcamp/tree/master/lecture8.1-springJPA/src/main/java/kodlamaio/northwind)
